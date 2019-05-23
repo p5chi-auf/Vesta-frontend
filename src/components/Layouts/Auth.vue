@@ -9,3 +9,8 @@
     </v-content>
   </v-app>
 </template>
+<style>
+#inspire {
+  background-color: #455a64;
+}
+</style>

@@ -3110,11 +3110,6 @@ estraverse@^4.0.0, estraverse@^4.1.0, estraverse@^4.1.1:
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
   integrity sha1-De4/7TH81GlhjOc0IJn8GvoL2xM=
 
-estree-walker@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.6.0.tgz#5d865327c44a618dde5699f763891ae31f257dae"
-  integrity sha512-peq1RfVAVzr3PU/jL31RaOjUKLoZJpObQWJJ+LgfcxDUifyLZ1RjPQZTl0pzj2uJ45b7A7XpyppXvxdEqzo4rw==
-
 esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
@@ -3508,11 +3503,6 @@ form-data@~2.3.2:
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
 
-format-thousands@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/format-thousands/-/format-thousands-1.1.1.tgz#7975bee30338d9006390da5831db0b41c323fbfa"
-  integrity sha1-eXW+4wM42QBjkNpYMdsLQcMj+/o=
-
 forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
@@ -3744,11 +3734,6 @@ globule@^1.0.0:
     glob "~7.1.1"
     lodash "~4.17.10"
     minimatch "~3.0.2"
-
-google-maps@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/google-maps/-/google-maps-3.3.0.tgz#4432b4715406bc15268ad35b1dd1b04d974956a6"
-  integrity sha512-pj4En0cWKG+lcBvC7qrzu5ItiMsYNTgjG2capsPzAbAM/O8ftugGpUUftTTwdGL8KlNvB4CEZ6IBWwpWYzUEpw==
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.15"
@@ -4841,7 +4826,7 @@ loglevel@^1.6.1:
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.1.tgz#e0fc95133b6ef276cdc8887cdaf24aa6f156f8fa"
   integrity sha1-4PyVEztu8nbNyIh82vJKpvFW+Po=
 
-loose-envify@^1.0.0, loose-envify@^1.2.0:
+loose-envify@^1.0.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -7989,14 +7974,6 @@ vue-eslint-parser@^4.0.2:
     esquery "^1.0.1"
     lodash "^4.17.11"
 
-vue-github-buttons@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/vue-github-buttons/-/vue-github-buttons-3.0.1.tgz#61f61bcb452746aac25497c21d90c6610de04e3c"
-  integrity sha512-ZVSLV1zASqzczgK8+ktKkBl+0pr4flrk/eDkm1gHXXNsE79Y2C7V463D3nQwc3kC2/mpqScpUVIfFKcCgrJpxQ==
-  dependencies:
-    format-thousands "^1.1.1"
-    tslib "^1.9.3"
-
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.3.tgz#2756f46cb3258054c5f4723de8ae7e87302a1ccf"
@@ -8017,13 +7994,6 @@ vue-router@3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.2.tgz#dedc67afe6c4e2bc25682c8b1c2a8c0d7c7e56be"
   integrity sha512-opKtsxjp9eOcFWdp6xLQPLmRGgfM932Tl56U9chYTnoWqKxQ8M20N7AkdEbM5beUh6wICoFGYugAX9vQjyJLFg==
-
-vue-social-sharing@2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/vue-social-sharing/-/vue-social-sharing-2.3.3.tgz#8d23e50923c71e0ae24188108c21836934cf5670"
-  integrity sha1-jSPlCSPHHgriQYgQjCGDaTTPVnA=
-  dependencies:
-    rollup-plugin-json "^2.1.0"
 
 vue-style-loader@^4.1.0:
   version "4.1.2"

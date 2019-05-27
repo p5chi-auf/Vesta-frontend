@@ -11,6 +11,6 @@
 </template>
 <style>
 #inspire {
-  background-color: #455a64;
+  background-color: teal;
 }
 </style>

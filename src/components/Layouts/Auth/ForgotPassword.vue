@@ -23,9 +23,9 @@
           </template>
         </v-form>
       </v-card-text>
-      <v-card-actions>
-        <v-layout row wrap>
-          <v-flex xs12 md1>
+      <v-card-actions class="ma-3">
+        <v-layout row wrap justify-end>
+          <v-flex xs12 md2>
             <v-btn block color="info">Submit</v-btn>
           </v-flex>
         </v-layout>
@@ -33,12 +33,3 @@
     </v-card>
   </v-flex>
 </template>
-<script>
-export default {
-  props: {},
-  data: () => ({
-    source: "String",
-    drawer: null
-  })
-};
-</script>

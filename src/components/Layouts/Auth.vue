@@ -10,7 +10,7 @@
   </v-app>
 </template>
 <style>
-#inspire {
+#inspire scoped {
   background-color: teal;
 }
 </style>

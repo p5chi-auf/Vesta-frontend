@@ -69,7 +69,7 @@
         <v-toolbar-side-icon
           @click.stop="drawer = !drawer"
         ></v-toolbar-side-icon>
-        <span class="hidden-sm-and-down">Google Contacts</span>
+        <span class="hidden-sm-and-down">Users</span>
       </v-toolbar-title>
       <v-text-field
         flat
@@ -89,14 +89,14 @@
       <v-btn icon large>
         <v-avatar size="32px" tile>
           <img
-            src="https://cdn.vuetifyjs.com/images/logos/logo.svg"
+            src="http://www.yogawithkatrina.com/blog/wp-content/uploads/2010/05/2010taipeiexpo.jpg"
             alt="Vuetify"
           />
         </v-avatar>
       </v-btn>
     </v-toolbar>
     <v-content>
-      <v-container fluid fill-height> </v-container>
+      <v-container><router-view /> </v-container>
     </v-content>
     <v-btn fab bottom right color="pink" dark fixed @click="dialog = !dialog">
       <v-icon>add</v-icon>

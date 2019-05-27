@@ -3,8 +3,9 @@ import Router from "vue-router";
 
 import DashboardLayout from "@/components/Layouts/Dashboard";
 import AuthLayout from "@/components/Layouts/Auth";
-
 import AuthRoutes from "./auth";
+import DashboardRoutes from "./dashboard";
+
 Vue.use(Router);
 
 export default new Router({
@@ -14,7 +15,9 @@ export default new Router({
     {
       path: "/dashboard",
       name: "dashboard",
-      component: DashboardLayout
+      redirect: { name: "user" },
+      component: DashboardLayout,
+      children: DashboardRoutes
     },
     {
       path: "/auth",

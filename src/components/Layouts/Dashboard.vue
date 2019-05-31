@@ -45,16 +45,17 @@
               </v-list-tile-content>
             </v-list-tile>
           </v-list-group>
-          <v-list-tile v-else :key="item.text">
-            <v-list-tile-action>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>
-                {{ item.text }}
-              </v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
+
+                    <v-list-tile v-else :key="item.text">
+                      <v-list-tile-action>
+                        <v-icon>{{ item.icon }}</v-icon>
+                      </v-list-tile-action>
+                      <v-list-tile-content>
+                        <v-list-tile-title>
+                          {{ item.text }}
+                        </v-list-tile-title>
+                      </v-list-tile-content>
+                    </v-list-tile>
         </template>
       </v-list>
     </v-navigation-drawer>
@@ -175,8 +176,9 @@ export default {
         icon: "keyboard_arrow_up",
         "icon-alt": "keyboard_arrow_down",
         text: "Labels",
-        model: true,
-        children: [{ icon: "add", text: "Create label" }]
+        model: false,
+        // children: [{ icon: "add", text: "Create label" }]
+        children: [{ text: "List" }, { text: "Acces Rights" }]
       },
       {
         icon: "keyboard_arrow_up",
@@ -184,11 +186,13 @@ export default {
         text: "More",
         model: false,
         children: [
-          { text: "Import" },
-          { text: "Export" },
-          { text: "Print" },
-          { text: "Undo changes" },
-          { text: "Other contacts" }
+          // { text: "Import" },
+          // { text: "Export" },
+          // { text: "Print" },
+          // { text: "Undo changes" },
+          // { text: "Other contacts" }
+          { text: "List" },
+          { text: "Graph" }
         ]
       },
       { icon: "settings", text: "Settings" },

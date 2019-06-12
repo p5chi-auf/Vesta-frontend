@@ -6,6 +6,9 @@
           <v-flex xs12>
             <v-card class="elevation-12">
               <v-toolbar color="teal darken-1" dark>
+                <router-link :to="{ name: 'login' }">
+                  <v-icon class="back">keyboard_arrow_left</v-icon>
+                </router-link>
                 <v-toolbar-title class="ma-auto">
                   Create an Account
                 </v-toolbar-title>
@@ -15,13 +18,13 @@
           <v-card-text>
             <v-container>
               <form>
-                <v-layout row wrap justify-start>
-                  <v-flex xs12 md6>
+                <v-layout row wrap justify-space-between>
+                  <v-flex xs12 md7>
                     <v-layout row>
                       <v-flex xs12 md12>
                         <v-text-field
                           v-model="name"
-                          :counter="10"
+                          :counter="20"
                           :rules="nameRules"
                           label="Name"
                           required
@@ -31,28 +34,27 @@
                     <v-flex xs12 md12>
                       <v-text-field
                         v-model="lastname"
-                        :counter="10"
+                        :counter="20"
                         :rules="lastnameRules"
                         label="Lastname"
                         required
                       ></v-text-field>
                     </v-flex>
                   </v-flex>
-                  <v-flex xs12 md6 sm12>
+                  <v-flex xs12 md4 sm12>
                     <img
-                      width="90%"
+                      width="100%"
+                      height="100%"
                       class="mx-auto"
-                      src="/img/registration/dispersion.png"
+                      src="/img/registration/log.png"
                     />
                   </v-flex>
                 </v-layout>
-
                 <v-layout row wrap justify-end> </v-layout>
-
                 <v-layout row>
                   <v-text-field
                     v-model="username"
-                    :counter="10"
+                    :counter="20"
                     :rules="usernameRules"
                     label="Username"
                     required
@@ -61,7 +63,7 @@
                 <v-layout row>
                   <v-text-field
                     v-model="email"
-                    :counter="10"
+                    :counter="20"
                     :rules="emailRules"
                     label="Mail*"
                     required
@@ -91,7 +93,6 @@
                         Clear
                       </v-btn>
                     </v-flex>
-
                     <v-flex xs12 lg4 xl2>
                       <v-btn block type="submit" color="info">
                         SingUp
@@ -107,7 +108,6 @@
     </v-layout>
   </v-container>
 </template>
-
 <script>
 export default {
   data: function() {
@@ -143,7 +143,6 @@ export default {
         : "";
     }
   },
-
   methods: {
     clear() {
       this.name = "";

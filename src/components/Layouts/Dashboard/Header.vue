@@ -6,6 +6,7 @@
     app
     fixed
   >
+    <v-toolbar-side-icon></v-toolbar-side-icon>
     <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
       <span class="hidden-sm-and-down">Users</span>
     </v-toolbar-title>

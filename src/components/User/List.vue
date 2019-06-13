@@ -1,15 +1,19 @@
 <template>
   <div>
-    <v-toolbar id="color" dark>
-      <v-toolbar-title>Users selected: {{ selected.length }}</v-toolbar-title>
+    <v-toolbar color="indigo lighten-5">
+        <v-toolbar-title v-if="selected.length <= 0">Users</v-toolbar-title>
+      <v-toolbar-title v-else="selected.length > 0">Users selected:  {{ selected.length }}</v-toolbar-title>
+
       <v-spacer></v-spacer>
+
       <div v-if="selected.length > 0">
-        <v-btn title="Add" icon> <v-icon>add</v-icon> </v-btn
-        ><v-btn title="Delete" icon> <v-icon>delete</v-icon> </v-btn>
+        <v-btn title="Delete" icon> <v-icon>delete</v-icon> </v-btn>
         <v-btn v-if="selected.length === 1" title="Edit" icon>
           <v-icon>edit</v-icon>
         </v-btn>
       </div>
+        <v-btn title="Add" icon> <v-icon>add</v-icon> </v-btn
+    </v-toolbar>
     </v-toolbar>
 
     <v-data-table
@@ -27,12 +31,12 @@
             hide-details
           ></v-checkbox>
         </td>
-        <td class="text-xs-right">{{ props.item.id }}</td>
-        <td class="text-xs-right">{{ props.item.firstname }}</td>
-        <td class="text-xs-right">{{ props.item.lastname }}</td>
-        <td class="text-xs-right">{{ props.item.username }}</td>
-        <td class="text-xs-right">{{ props.item.email }}</td>
-        <td class="text-xs-right">{{ props.item.password }}</td>
+        <td>{{ props.item.id }}</td>
+        <td>{{ props.item.firstname }}</td>
+        <td>{{ props.item.lastname }}</td>
+        <td>{{ props.item.username }}</td>
+        <td>{{ props.item.email }}</td>
+        <td>{{ props.item.password }}</td>
         <td class="justify-center layout px-0"></td>
       </template>
     </v-data-table>
@@ -125,23 +129,14 @@ export default {
       }
     ],
     headers: [
-      { text: "ID", align: "right", sortable: true, value: "name" },
-      { text: "First Name", align: "right", value: "firstname" },
-      { text: "Last Name", align: "right", value: "lastname" },
-      { text: "User Name", align: "right", value: "username" },
-      { text: "E-mail", align: "right", value: "email" },
-      { text: "Password", align: "right", value: "password" }
+      { text: "ID", align: "left", sortable: true, value: "name" },
+      { text: "First Name", value: "firstname" },
+      { text: "Last Name", value: "lastname" },
+      { text: "User Name", value: "username" },
+      { text: "E-mail", value: "email" },
+      { text: "Password", value: "password" }
     ]
-  }),
-  watch: {
-    selected() {
-      console.log(this.selected);
-    }
-  }
+  })
 };
 </script>
-<style>
-#color {
-  background-color: #535c68;
-}
-</style>
+

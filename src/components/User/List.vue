@@ -1,14 +1,16 @@
 <template>
   <div>
-    <v-layout row justify-space-between>
-      <v-flex xs12>
-        <div v-if="selected.length > 0">
-          <v-btn target color="success">Add</v-btn>
-          <v-btn color="error">Delete</v-btn>
-          <v-btn v-if="selected.length === 1" color="primary">Change</v-btn>
-        </div>
-      </v-flex>
-    </v-layout>
+    <v-toolbar id="color" dark>
+      <v-toolbar-title>Users selected: {{ selected.length }}</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <div v-if="selected.length > 0">
+        <v-btn title="Add" icon> <v-icon>add</v-icon> </v-btn
+        ><v-btn title="Delete" icon> <v-icon>delete</v-icon> </v-btn>
+        <v-btn v-if="selected.length === 1" title="Edit" icon>
+          <v-icon>edit</v-icon>
+        </v-btn>
+      </div>
+    </v-toolbar>
 
     <v-data-table
       v-model="selected"
@@ -31,14 +33,7 @@
         <td class="text-xs-right">{{ props.item.username }}</td>
         <td class="text-xs-right">{{ props.item.email }}</td>
         <td class="text-xs-right">{{ props.item.password }}</td>
-        <td class="justify-center layout px-0">
-          <v-icon small class="mr-2" @click="editItem(props.item)">
-            edit
-          </v-icon>
-          <v-icon small @click="deleteItem(props.item)">
-            delete
-          </v-icon>
-        </td>
+        <td class="justify-center layout px-0"></td>
       </template>
     </v-data-table>
   </div>
@@ -135,8 +130,7 @@ export default {
       { text: "Last Name", align: "right", value: "lastname" },
       { text: "User Name", align: "right", value: "username" },
       { text: "E-mail", align: "right", value: "email" },
-      { text: "Password", align: "right", value: "password" },
-      { text: "Actions", align: "center", value: "name", sortable: false }
+      { text: "Password", align: "right", value: "password" }
     ]
   }),
   watch: {
@@ -146,3 +140,8 @@ export default {
   }
 };
 </script>
+<style>
+#color {
+  background-color: #535c68;
+}
+</style>

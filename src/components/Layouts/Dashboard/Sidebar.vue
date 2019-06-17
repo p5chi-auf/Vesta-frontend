@@ -1,103 +1,172 @@
 <template>
   <v-navigation-drawer
     v-model="drawer"
-    :clipped="$vuetify.breakpoint.lgAndUp"
     fixed
+    clipped
+    class="grey lighten-4"
     app
   >
-    <v-list dense>
-      <template v-for="item in items">
-        <v-layout v-if="item.heading" :key="item.heading" row align-center>
-          <v-flex xs6>
-            <v-subheader v-if="item.heading">
-              {{ item.heading }}
-            </v-subheader>
-          </v-flex>
-          <v-flex xs6 class="text-xs-center">
-            <a href="#!" class="body-2 black--text">EDIT</a>
-          </v-flex>
-        </v-layout>
-        <v-list-group
-          v-else-if="item.children"
-          :key="item.text"
-          v-model="item.model"
-          :prepend-icon="item.model ? item.icon : item['icon-alt']"
-          append-icon=""
-        >
-          <template v-slot:activator>
-            <v-list-tile>
-              <v-list-tile-content>
-                <v-list-tile-title>
-                  {{ item.text }}
-                </v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </template>
-          <v-list-tile v-for="(child, i) in item.children" :key="i">
-            <v-list-tile-action v-if="child.icon">
-              <v-icon>{{ child.icon }}</v-icon>
-            </v-list-tile-action>
+    <v-list>
+      <v-list-group
+        v-for="item in items"
+        :key="item.title"
+        v-model="item.active"
+        :prepend-icon="item.action"
+        no-action
+      >
+        <template slot="activator">
+          <v-list-tile>
             <v-list-tile-content>
               <v-list-tile-title>
-                {{ child.text }}
+                <v-list-tile-title>{{ item.title }} </v-list-tile-title>
               </v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-        </v-list-group>
+        </template>
 
-        <v-list-tile v-else :key="item.text">
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
+        <v-list-tile
+          v-for="subItem in item.items"
+          :key="subItem.title"
+          @click="items"
+        >
           <v-list-tile-content>
-            <v-list-tile-title>
-              {{ item.text }}
-            </v-list-tile-title>
+            <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
           </v-list-tile-content>
+
+          <v-list-tile-action>
+            <v-icon>{{ subItem.action }}</v-icon>
+          </v-list-tile-action>
         </v-list-tile>
-      </template>
+      </v-list-group>
     </v-list>
   </v-navigation-drawer>
 </template>
 <script>
 export default {
-  data: () => ({
-    source: "",
-    dialog: false,
-    drawer: null,
-    items: [
-      { icon: "contacts", text: "Contacts" },
-      { icon: "history", text: "Frequently contacted" },
-      { icon: "content_copy", text: "Duplicates" },
-      {
-        icon: "keyboard_arrow_up",
-        "icon-alt": "keyboard_arrow_down",
-        text: "Labels",
-        model: false,
-        // children: [{ icon: "add", text: "Create label" }]
-        children: [{ text: "List" }, { text: "Acces Rights" }]
-      },
-      {
-        icon: "keyboard_arrow_up",
-        "icon-alt": "keyboard_arrow_down",
-        text: "More",
-        model: false,
-        children: [
-          // { text: "Import" },
-          // { text: "Export" },
-          // { text: "Print" },
-          // { text: "Undo changes" },
-          // { text: "Other contacts" }
-          { text: "List" },
-          { text: "Graph" }
-        ]
-      },
-      { icon: "settings", text: "Settings" },
-      { icon: "chat_bubble", text: "Send feedback" },
-      { icon: "help", text: "Help" },
-      { icon: "phonelink", text: "App downloads" },
-      { icon: "keyboard", text: "Go to the old version" }
-    ]
-  })
+  data() {
+    return {
+      items: [
+        {
+          action: "account_circle",
+          title: "User",
+          items: [
+            { title: "List" },
+            { title: "Right access" },
+            { title: "Preferences" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog CHI",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog ORL",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog CLU",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog BRA",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog IAS",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog BUC",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog PAR",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog FRA",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog BOS",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog HAN",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        },
+        {
+          action: "location_city",
+          title: "Pentalog MEX",
+
+          items: [
+            { title: "Floor 1" },
+            { title: "Floor 2" },
+            { title: "Floor 3" }
+          ]
+        }
+      ]
+    };
+  }
 };
 </script>

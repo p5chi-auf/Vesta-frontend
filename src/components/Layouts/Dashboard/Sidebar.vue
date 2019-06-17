@@ -49,11 +49,6 @@ export default {
         {
           action: "account_circle",
           title: "User",
-          user: [
-            ["List", "people"],
-            ["Right Access", "how_to_reg"],
-            ["Preferences", "star_border"]
-          ],
           items: [
             { title: "List" },
             { title: "Right access" },

@@ -25,7 +25,6 @@
               type="password"
             ></v-text-field>
             <v-checkbox
-              v-model="ex4"
               label="Remember Me !"
               color="info"
               value="Remember Me !"
@@ -57,11 +56,15 @@
   </v-flex>
 </template>
 <script>
+import { login } from "@/api/user";
 export default {
   props: {},
   data: () => ({
     source: "String",
     drawer: null
-  })
+  }),
+  created() {
+    login("aadmin", "qw123");
+  }
 };
 </script>

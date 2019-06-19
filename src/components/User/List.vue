@@ -1,10 +1,12 @@
 <template>
   <div>
     <v-toolbar color="indigo lighten-5">
-      <v-toolbar-title v-if="selected.length === 0">Users</v-toolbar-title>
-      <v-toolbar-title v-if="selected.length > 0"
-        >Users selected: {{ selected.length }}</v-toolbar-title
-      >
+      <v-toolbar-title v-if="selected.length === 0">
+        Users
+      </v-toolbar-title>
+      <v-toolbar-title v-if="selected.length > 0">
+        Users selected: {{ selected.length }}
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <div v-if="selected.length > 0">
         <v-btn title="Delete" icon> <v-icon>delete</v-icon> </v-btn>

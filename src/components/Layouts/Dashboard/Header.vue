@@ -6,11 +6,14 @@
     app
     fixed
   >
-    <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
+    <v-toolbar-title class="ml-0 pl-3 toolbar">
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <span class="title ml-3 mr-5"
-        >Vesta&nbsp;<span class="font-weight-light">Users</span></span
-      >
+      <span class="title ml-3 mr-5">
+        Vesta
+        <span class="font-weight-light">
+          Users
+        </span>
+      </span>
     </v-toolbar-title>
     <v-text-field
       flat
@@ -34,3 +37,8 @@
     </v-btn>
   </v-toolbar>
 </template>
+<style scoped>
+.toolbar {
+  width: 300px;
+}
+</style>

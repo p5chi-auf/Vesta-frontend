@@ -45,6 +45,7 @@
 export default {
   data() {
     return {
+      drawer: null,
       items: [
         {
           action: "account_circle",

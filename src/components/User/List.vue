@@ -1,19 +1,18 @@
 <template>
   <div>
     <v-toolbar color="indigo lighten-5">
-        <v-toolbar-title v-if="selected.length === 0">Users</v-toolbar-title>
-      <v-toolbar-title v-if="selected.length > 0">Users selected:  {{ selected.length }}</v-toolbar-title>
-
+      <v-toolbar-title v-if="selected.length === 0">Users</v-toolbar-title>
+      <v-toolbar-title v-if="selected.length > 0"
+        >Users selected: {{ selected.length }}</v-toolbar-title
+      >
       <v-spacer></v-spacer>
-
       <div v-if="selected.length > 0">
         <v-btn title="Delete" icon> <v-icon>delete</v-icon> </v-btn>
         <v-btn v-if="selected.length === 1" title="Edit" icon>
           <v-icon>edit</v-icon>
         </v-btn>
       </div>
-        <v-btn title="Add" icon> <v-icon>add</v-icon> </v-btn>
-    </v-toolbar>
+      <v-btn title="Add" icon> <v-icon>add</v-icon> </v-btn>
     </v-toolbar>
 
     <v-data-table
@@ -139,4 +138,3 @@ export default {
   })
 };
 </script>
-

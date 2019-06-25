@@ -2,8 +2,11 @@ module.exports = {
   devServer: {
     proxy: {
       "^/api": {
-        target: "http://vesta.local/api",
-        changeOrigin: true
+        target: "http://vesta.local/api/",
+        // changeOrigin: true
+        pathRewrite: {
+          "/api": ""
+        }
       }
     }
   }

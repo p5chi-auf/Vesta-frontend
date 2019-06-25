@@ -46,7 +46,7 @@
                       width="100%"
                       height="100%"
                       class="mx-auto"
-                      src="/img/registration/log.png"
+                      src="/img/registration/1.png"
                     />
                   </v-flex>
                 </v-layout>

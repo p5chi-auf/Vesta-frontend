@@ -1,82 +1,54 @@
 <template>
-  <v-data-table
-    v-model="selected"
-    :headers="headers"
-    :items="desserts"
-    :pagination.sync="pagination"
-    select-all
-    item-key="name"
-    class="elevation-1"
-  >
-    <template v-slot:headers="props">
-      <tr>
-        <th>
-          <v-checkbox
-            :input-value="props.all"
-            :indeterminate="props.indeterminate"
-            primary
-            hide-details
-            @click.stop="toggleAll"
-          ></v-checkbox>
-        </th>
-        <th
-          v-for="header in props.headers"
-          :key="header.text"
-          :class="[
-            'column sortable',
-            pagination.descending ? 'desc' : 'asc',
-            header.value === pagination.sortBy ? 'active' : ''
-          ]"
-          @click="changeSort(header.value)"
-        >
-          <v-icon small>arrow_upward</v-icon>
-          {{ header.text }}
-        </th>
-      </tr>
-    </template>
-    <template v-slot:items="props">
-      <tr :active="props.selected" @click="props.selected = !props.selected">
+  <div>
+    <v-toolbar color="indigo lighten-5">
+        <v-toolbar-title v-if="selected.length === 0">Users</v-toolbar-title>
+      <v-toolbar-title v-if="selected.length > 0">Users selected:  {{ selected.length }}</v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <div v-if="selected.length > 0">
+        <v-btn title="Delete" icon> <v-icon>delete</v-icon> </v-btn>
+        <v-btn v-if="selected.length === 1" title="Edit" icon>
+          <v-icon>edit</v-icon>
+        </v-btn>
+      </div>
+        <v-btn title="Add" icon> <v-icon>add</v-icon> </v-btn>
+    </v-toolbar>
+    </v-toolbar>
+
+    <v-data-table
+      v-model="selected"
+      :headers="headers"
+      :items="items"
+      select-all
+      class="elevation-1"
+    >
+      <template v-slot:items="props">
         <td>
           <v-checkbox
-            :input-value="props.selected"
+            v-model="props.selected"
             primary
             hide-details
           ></v-checkbox>
         </td>
-
-        <td>{{ props.item.name }}</td>
-        <td class="text-xs-right">{{ props.item.firstname }}</td>
-        <td class="text-xs-right">{{ props.item.lastname }}</td>
-        <td class="text-xs-right">{{ props.item.username }}</td>
-        <td class="text-xs-right">{{ props.item.email }}</td>
-        <td class="text-xs-right">{{ props.item.password }}</td>
-      </tr>
-    </template>
-  </v-data-table>
+        <td>{{ props.item.id }}</td>
+        <td>{{ props.item.firstname }}</td>
+        <td>{{ props.item.lastname }}</td>
+        <td>{{ props.item.username }}</td>
+        <td>{{ props.item.email }}</td>
+        <td>{{ props.item.password }}</td>
+        <td class="justify-center layout px-0"></td>
+      </template>
+    </v-data-table>
+  </div>
 </template>
-
 <script>
 export default {
   data: () => ({
-    pagination: {
-      sortBy: "name"
-    },
     selected: [],
-    headers: [
+    items: [
       {
-        text: "ID",
-        align: "left",
-        value: "name"
-      },
-      { text: "First Name", value: "firstname" },
-      { text: "Last Name", value: "lastname" },
-      { text: "User Name", value: "username" },
-      { text: "E-mail", value: "email" },
-      { text: "Password", value: "password" }
-    ],
-    desserts: [
-      {
-        name: 1,
+        id: 1,
         firstname: "Adrian",
         lastname: "Rotari",
         username: "arotari",
@@ -84,7 +56,7 @@ export default {
         password: "adrian11"
       },
       {
-        name: 2,
+        id: 2,
         firstname: "Ion",
         lastname: "Gherman",
         username: "iongherman",
@@ -92,7 +64,7 @@ export default {
         password: "13456"
       },
       {
-        name: 3,
+        id: 3,
         firstname: "Elena",
         lastname: "Ambroci",
         username: "eambroci",
@@ -100,7 +72,7 @@ export default {
         password: "elena34"
       },
       {
-        name: 4,
+        id: 4,
         firstname: "Carolina",
         lastname: "Ciocanu",
         username: "cciocanu",
@@ -108,7 +80,7 @@ export default {
         password: "Car123785"
       },
       {
-        name: 5,
+        id: 5,
         firstname: "Eugenia",
         lastname: "Bejenari",
         username: "ebejenari",
@@ -116,7 +88,7 @@ export default {
         password: "234567"
       },
       {
-        name: 6,
+        id: 6,
         firstname: "Ion",
         lastname: "Anton",
         username: "ianton",
@@ -124,7 +96,7 @@ export default {
         password: "25678"
       },
       {
-        name: 7,
+        id: 7,
         firstname: "Mihaela",
         lastname: "Guidea",
         username: "mguidea",
@@ -132,7 +104,7 @@ export default {
         password: "904757"
       },
       {
-        name: 8,
+        id: 8,
         firstname: "Mihai",
         lastname: "Albu",
         username: "malbu",
@@ -140,7 +112,7 @@ export default {
         password: "mihaita56"
       },
       {
-        name: 9,
+        id: 9,
         firstname: "Vladimir",
         lastname: "Ceban",
         username: "vceban",
@@ -148,29 +120,23 @@ export default {
         password: "vadic45"
       },
       {
-        name: 10,
+        id: 10,
         firstname: "Stefan",
         lastname: "Ciudac",
         username: "sciudac",
         email: "ciudac@mail.ru",
         password: "8456858"
       }
+    ],
+    headers: [
+      { text: "ID", align: "left", sortable: true, value: "name" },
+      { text: "First Name", value: "firstname" },
+      { text: "Last Name", value: "lastname" },
+      { text: "User Name", value: "username" },
+      { text: "E-mail", value: "email" },
+      { text: "Password", value: "password" }
     ]
-  }),
-
-  methods: {
-    toggleAll() {
-      if (this.selected.length) this.selected = [];
-      else this.selected = this.desserts.slice();
-    },
-    changeSort(column) {
-      if (this.pagination.sortBy === column) {
-        this.pagination.descending = !this.pagination.descending;
-      } else {
-        this.pagination.sortBy = column;
-        this.pagination.descending = false;
-      }
-    }
-  }
+  })
 };
 </script>
+

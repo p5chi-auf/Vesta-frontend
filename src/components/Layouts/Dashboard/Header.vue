@@ -1,13 +1,19 @@
 <template>
   <v-toolbar
     :clipped-left="$vuetify.breakpoint.lgAndUp"
-    color="blue darken-3"
+    color="teal lighten-1"
     dark
     app
     fixed
   >
-    <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
-      <span class="hidden-sm-and-down">Users</span>
+    <v-toolbar-title class="ml-0 pl-3 toolbar">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <span class="title ml-3 mr-5">
+        Vesta
+        <span class="font-weight-light">
+          Users
+        </span>
+      </span>
     </v-toolbar-title>
     <v-text-field
       flat
@@ -25,12 +31,14 @@
       <v-icon>notifications</v-icon>
     </v-btn>
     <v-btn icon large>
-      <v-avatar size="32px" tile>
-        <img
-          src="http://www.yogawithkatrina.com/blog/wp-content/uploads/2010/05/2010taipeiexpo.jpg"
-          alt="Vuetify"
-        />
+      <v-avatar size="42px">
+        <img src="/img/avatar/vesta.png" alt="Vesta" />
       </v-avatar>
     </v-btn>
   </v-toolbar>
 </template>
+<style scoped>
+.toolbar {
+  width: 300px;
+}
+</style>

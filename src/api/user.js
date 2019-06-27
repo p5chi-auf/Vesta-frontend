@@ -1,11 +1,8 @@
 import API from "./api";
-
-export const login = function(email, password) {
+export const login = function(username, password) {
   return API.post("/user/login", {
-    param: {
-      email: email,
-      password: password
-    }
+    username,
+    password
   });
 };
 

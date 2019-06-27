@@ -5,3 +5,5 @@ export const login = function(username, password) {
     password
   });
 };
+
+export const register = params => API.post("/user/registration", params);

@@ -1,18 +1,31 @@
 <template>
   <v-flex xs12 sm5 md3>
     <v-card class="elevation-12">
-      <v-toolbar color="teal darken-1" dense height="60px">
-        <v-toolbar-title class="ma-auto">
-          Sign in
-        </v-toolbar-title>
-      </v-toolbar>
+      <v-img src="/img/registration/reg.jpg" height="80px">
+        <v-layout>
+          <v-card-title>
+            <v-spacer></v-spacer>
+            <v-layout row wrap justify-content-center>
+              <v-card-title>
+                <v-layout justify-content-center>
+                  <div>
+                    <v-toolbar-title class="t" font-weight-light.font-italic
+                      >Sign In</v-toolbar-title
+                    >
+                  </div>
+                </v-layout>
+              </v-card-title>
+            </v-layout>
+          </v-card-title>
+        </v-layout>
+      </v-img>
+
       <v-progress-linear
         v-if="loading"
         :indeterminate="true"
         height="3px"
         class="auth__progress-bar"
       ></v-progress-linear>
-
       <v-flex xs10 offset-xs1>
         <v-form ref="form" :autocomplete="false">
           <v-card-text>

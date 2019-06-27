@@ -9,8 +9,8 @@
     </v-content>
   </v-app>
 </template>
-<style>
-#inspire scoped {
-  background-color: teal;
+<style scoped>
+#inspire {
+  background-image: url("/img/registration/of.jpg");
 }
 </style>

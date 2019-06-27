@@ -2,30 +2,46 @@
   <v-container>
     <v-layout>
       <v-flex xs12 sm5 offset-sm3>
-        <v-card class="elevation-5">
+        <v-card class="elevation-5" color="grey lighten-4">
           <v-flex xs12>
             <v-card class="elevation-12">
-              <v-toolbar color="teal darken-1" dark>
-                <router-link :to="{ name: 'login' }">
-                  <v-icon class="back">keyboard_arrow_left</v-icon>
-                </router-link>
-                <v-toolbar-title class="ma-auto">
-                  Create an Account
-                </v-toolbar-title>
-              </v-toolbar>
+              <v-img src="/img/registration/reg.jpg" height="80px">
+                <v-layout row justify-content-end>
+                  <v-card-title>
+                    <router-link :to="{ name: 'login' }">
+                      <v-btn dark icon>
+                        <v-icon class="b">chevron_left</v-icon>
+                      </v-btn>
+                    </router-link>
+
+                    <v-toolbar-title
+                      class="t"
+                      font-weight-medium.font-italic
+                      text-uppercase
+                      >Create an Account</v-toolbar-title
+                    >
+                  </v-card-title>
+                </v-layout>
+              </v-img>
+              <v-progress-linear
+                v-if="loading"
+                :active="isUpdating"
+                class="progress_liniar"
+                color="blue lighten-0"
+                height="3"
+                indeterminate
+              ></v-progress-linear>
             </v-card>
           </v-flex>
           <v-card-text>
             <v-container>
-              <form>
+              <v-form @submit="registerUser">
                 <v-layout row wrap justify-space-between>
                   <v-flex xs12 md7>
                     <v-layout row>
                       <v-flex xs12 md12>
                         <v-text-field
-                          v-model="name"
-                          :counter="20"
-                          :rules="nameRules"
+                          v-model="form.firstName"
                           label="Name"
                           required
                         ></v-text-field>
@@ -33,9 +49,7 @@
                     </v-layout>
                     <v-flex xs12 md12>
                       <v-text-field
-                        v-model="lastname"
-                        :counter="20"
-                        :rules="lastnameRules"
+                        v-model="form.lastName"
                         label="Lastname"
                         required
                       ></v-text-field>
@@ -46,61 +60,60 @@
                       width="100%"
                       height="100%"
                       class="mx-auto"
-                      src="/img/registration/1.png"
+                      src="/img/registration/logo.png"
                     />
                   </v-flex>
                 </v-layout>
                 <v-layout row wrap justify-end> </v-layout>
                 <v-layout row>
                   <v-text-field
-                    v-model="username"
-                    :counter="20"
-                    :rules="usernameRules"
+                    v-model="form.username"
                     label="Username"
                     required
                   ></v-text-field>
                 </v-layout>
                 <v-layout row>
                   <v-text-field
-                    v-model="email"
-                    :counter="20"
-                    :rules="emailRules"
-                    label="Mail*"
+                    v-model="form.email"
+                    label="Email*"
                     required
                   ></v-text-field>
                 </v-layout>
                 <v-layout row>
                   <v-text-field
-                    v-model="password"
-                    :counter="30"
+                    v-model="form.password"
+                    :append-icon="show1 ? 'visibility_off' : 'visibility'"
+                    :type="show1 ? 'text' : 'password'"
                     label="Password"
                     required
+                    @click:append="show1 = !show1"
                   ></v-text-field>
                 </v-layout>
                 <v-layout row>
                   <v-text-field
-                    v-model="confirmpassword"
-                    :counter="30"
-                    :rules="[comparePassword]"
+                    v-model="form.confirmpassword"
+                    :append-icon="show2 ? 'visibility_off' : 'visibility'"
+                    :type="show2 ? 'text' : 'password'"
                     label="Confirm Password"
                     required
+                    @click:append="show2 = !show2"
                   ></v-text-field>
                 </v-layout>
                 <v-container grid-list-md text-xs-center>
                   <v-layout row wrap justify-end>
                     <v-flex xs12 lg4 xl2>
-                      <v-btn block color="info">
+                      <v-btn block color="info" @click="clear">
                         Clear
                       </v-btn>
                     </v-flex>
                     <v-flex xs12 lg4 xl2>
-                      <v-btn block type="submit" color="info">
-                        SingUp
+                      <v-btn block color="info" @click="registerUser">
+                        SignUp
                       </v-btn>
                     </v-flex>
                   </v-layout>
                 </v-container>
-              </form>
+              </v-form>
             </v-container>
           </v-card-text>
         </v-card>
@@ -109,48 +122,35 @@
   </v-container>
 </template>
 <script>
+import { register } from "@/api/user";
+const defaultForm = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  username: "",
+  password: "",
+  confirmpassword: ""
+};
 export default {
+  props: {},
   data: function() {
     return {
-      name: "",
-      nameRules: [
-        v => !!v || "Name is required",
-        v => (v && v.length <= 10) || "Name must be less than 10 characters"
-      ],
-      lastname: "",
-      lastnameRules: [
-        v => !!v || "Lastname is required",
-        v => (v && v.length <= 10) || "Lastname must be less than 10 characters"
-      ],
-      email: "",
-      emailRules: [
-        v => !!v || "Mail is required",
-        v => (v && v.length <= 10) || "Mail must be less than 10 characters"
-      ],
-      username: "",
-      usernameRules: [
-        v => !!v || "Username is required",
-        v => (v && v.length <= 10) || "Username must be less than 10 characters"
-      ],
-      password: "",
-      confirmpassword: ""
+      loading: false,
+      show1: false,
+      show2: false,
+      form: defaultForm
     };
-  },
-  computed: {
-    comparePassword() {
-      return this.password !== this.confirmpassword
-        ? "Password do not match"
-        : "";
-    }
   },
   methods: {
     clear() {
-      this.name = "";
-      this.lastname = "";
-      this.email = "";
-      this.username = "";
-      this.password = "";
-      this.confirmpassword = "";
+      this.form = defaultForm;
+    },
+
+    async registerUser() {
+      this.loading = true;
+      register(this.form);
+      await defaultForm;
+      this.$router.push({ name: "dashboard" });
     }
   }
 };

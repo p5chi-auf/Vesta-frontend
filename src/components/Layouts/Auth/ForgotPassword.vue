@@ -1,12 +1,25 @@
 <template>
   <v-flex xs12 sm8 md4>
     <v-card class="elevation-12">
-      <v-toolbar color="teal darken-1" dark>
-        <router-link :to="{ name: 'login' }"
-          ><v-icon>keyboard_arrow_left</v-icon>
-        </router-link>
-        <v-toolbar-title>Account recovery</v-toolbar-title>
-      </v-toolbar>
+      <v-img src="/img/registration/reg.jpg" height="80px">
+        <v-card-title>
+          <v-layout>
+            <v-card-title>
+              <router-link :to="{ name: 'login' }"
+                ><v-icon class="b">chevron_left</v-icon>
+              </router-link>
+
+              <v-toolbar-title
+                class="t"
+                font-weight-medium.font-italic
+                text-uppercase
+                >Account recovery</v-toolbar-title
+              >
+            </v-card-title>
+          </v-layout>
+        </v-card-title>
+      </v-img>
+
       <v-card-text>
         <v-form>
           <v-text-field

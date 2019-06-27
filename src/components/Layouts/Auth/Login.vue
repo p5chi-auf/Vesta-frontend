@@ -1,11 +1,25 @@
 <template>
   <v-flex xs12 sm5 md3>
     <v-card class="elevation-12">
-      <v-toolbar color="teal darken-1" dark>
-        <v-toolbar-title class="ma-auto">
-          Welcome
-        </v-toolbar-title>
-      </v-toolbar>
+      <v-img src="/img/registration/reg.jpg" height="80px">
+        <v-layout>
+          <v-card-title>
+            <v-spacer></v-spacer>
+            <v-layout row wrap justify-content-center>
+              <v-card-title>
+                <v-layout justify-content-center>
+                  <div>
+                    <v-toolbar-title class="t" font-weight-light.font-italic
+                      >Sign In</v-toolbar-title
+                    >
+                  </div>
+                </v-layout>
+              </v-card-title>
+            </v-layout>
+          </v-card-title>
+        </v-layout>
+      </v-img>
+
       <v-flex xs10 offset-xs1>
         <v-card-text>
           <v-form>

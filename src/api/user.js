@@ -8,3 +8,5 @@ export const login = function(email, password) {
     }
   });
 };
+
+export const register = params => API.post("/user/registration", params);

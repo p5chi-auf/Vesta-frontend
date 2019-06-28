@@ -47,6 +47,7 @@
 export default {
   data: () => ({
     selected: [],
+    // TODO make the error variable 
     items: [
       {
         id: 1,
@@ -138,5 +139,13 @@ export default {
       { text: "Password", value: "password" }
     ]
   })
+  // TODO on component is created  https://vuejs.org/v2/guide/instance.html
+  // TODO setup the loading true
+  // TODO make in @/api/user.js new function that will fetch the user list https://github.com/axios/axios
+  // TODO try to call this api function  https://www.w3schools.com/js/js_errors.asp
+  // TODO in case of success response put the list from backend to the variable this.items  https://vuejs.org/v2/cookbook/adding-instance-properties.html
+  // TODO in case of wrong response show the put the error code in this.error
+  // TODO setup the loading false
+
 };
 </script>

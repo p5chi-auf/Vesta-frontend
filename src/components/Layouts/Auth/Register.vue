@@ -145,12 +145,14 @@ export default {
     clear() {
       this.form = defaultForm;
     },
-
     async registerUser() {
       this.loading = true;
       register(this.form);
+      // TODO try to make the request 
+      // TODO in case of seccess save the information and redirect it to dashboad
       await defaultForm;
       this.$router.push({ name: "dashboard" });
+      // TODO in case of wrong response show toasted
     }
   }
 };

@@ -55,7 +55,7 @@
                       ></v-text-field>
                     </v-flex>
                   </v-flex>
-                  <v-flex hidden-md-and-down hidden-xs-and-down xs12 md4 sm12>
+                  <v-flex hidden-md-and-down xs12 md4 sm12>
                     <img
                       width="100%"
                       class="mx-auto"
@@ -148,7 +148,7 @@ export default {
       this.loading = true;
       register(this.form);
       //  try to make the request
-      //  TO DO in case of seccess save the information and redirect it to dashboad
+      //  TODO in case of success save the information and redirect it to dashboad
       await defaultForm;
       this.$router.push({ name: "dashboard" });
       //  in case of wrong response show toasted

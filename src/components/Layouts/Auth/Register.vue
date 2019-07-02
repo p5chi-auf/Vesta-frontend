@@ -55,10 +55,9 @@
                       ></v-text-field>
                     </v-flex>
                   </v-flex>
-                  <v-flex xs12 md4 sm12>
+                  <v-flex hidden-md-and-down hidden-xs-and-down xs12 md4 sm12>
                     <img
                       width="100%"
-                      height="100%"
                       class="mx-auto"
                       src="/img/registration/logo.png"
                     />
@@ -148,11 +147,11 @@ export default {
     async registerUser() {
       this.loading = true;
       register(this.form);
-      // TODO try to make the request 
-      // TODO in case of seccess save the information and redirect it to dashboad
+      //  try to make the request
+      //  TO DO in case of seccess save the information and redirect it to dashboad
       await defaultForm;
       this.$router.push({ name: "dashboard" });
-      // TODO in case of wrong response show toasted
+      //  in case of wrong response show toasted
     }
   }
 };

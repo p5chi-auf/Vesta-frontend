@@ -56,7 +56,7 @@
                     </v-flex>
                   </v-flex>
 
-                  <v-flex hidden-md-and-down hidden-xs-and-down xs12 md4 sm12>
+                  <v-flex hidden-md-and-down xs12 md4 sm12>
                     <img
                       width="100%"
                       class="logo"
@@ -85,31 +85,32 @@
                 <v-layout row>
                   <v-text-field
                     v-model="form.password"
-                    :append-icon="show1 ? 'visibility_off' : 'visibility'"
-                    :type="show1 ? 'text' : 'password'"
+                    :append-icon="
+                      itShowPassword ? 'visibility_off' : 'visibility'
+                    "
+                    :type="itShowPassword ? 'text' : 'password'"
                     label="Password"
                     required
-                    @click:append="show1 = !show1"
+                    @click:append="itShowPassword = !itShowPassword"
                   ></v-text-field>
                 </v-layout>
                 <v-layout row>
                   <v-text-field
                     v-model="form.confirmpassword"
-                    :append-icon="show2 ? 'visibility_off' : 'visibility'"
-                    :type="show2 ? 'text' : 'password'"
+                    :append-icon="
+                      itShowConfirmPassword ? 'visibility_off' : 'visibility'
+                    "
+                    :type="itShowConfirmPassword ? 'text' : 'password'"
                     label="Confirm Password"
                     required
-                    @click:append="show2 = !show2"
+                    @click:append="
+                      itShowConfirmPassword = !itShowConfirmPassword
+                    "
                   ></v-text-field>
                 </v-layout>
 
                 <v-container grid-list-md text-xs-center>
                   <v-layout row wrap justify-end>
-                    <v-flex xs12 lg4 xl2>
-                      <v-btn block color="info">
-                        Clear
-                      </v-btn>
-                    </v-flex>
                     <v-flex xs12 lg4 xl2>
                       <v-btn
                         block
@@ -155,8 +156,8 @@ export default {
     loading: false,
     notification: false,
     notificationMessage: "",
-    show1: false,
-    show2: false
+    itShowPassword: false,
+    itShowConfirmPassword: false
   }),
   methods: {
     async onSubmit() {
@@ -172,11 +173,8 @@ export default {
         this.$router.push({ name: "dashboard" });
       } catch (e) {
         this.showNotification(e);
+        this.loading = false;
       }
-      this.setLoadingFalse();
-    },
-    setLoadingFalse() {
-      this.loading = false;
     },
     showNotification(e) {
       this.notification = true;

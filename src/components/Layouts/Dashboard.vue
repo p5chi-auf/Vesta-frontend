@@ -20,8 +20,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-#dashboard {
-  background-image: url("/img/background/b1.png");
-}
-</style>

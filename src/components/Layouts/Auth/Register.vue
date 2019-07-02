@@ -13,7 +13,6 @@
                         <v-icon class="b">chevron_left</v-icon>
                       </v-btn>
                     </router-link>
-
                     <v-toolbar-title
                       class="t"
                       font-weight-medium.font-italic
@@ -55,7 +54,6 @@
                       ></v-text-field>
                     </v-flex>
                   </v-flex>
-
                   <v-flex hidden-md-and-down xs12 md4 sm12>
                     <img
                       width="100%"
@@ -64,7 +62,6 @@
                     />
                   </v-flex>
                 </v-layout>
-
                 <v-layout row>
                   <v-text-field
                     v-model="form.username"
@@ -81,7 +78,6 @@
                     required
                   ></v-text-field>
                 </v-layout>
-
                 <v-layout row>
                   <v-text-field
                     v-model="form.password"
@@ -108,7 +104,6 @@
                     "
                   ></v-text-field>
                 </v-layout>
-
                 <v-container grid-list-md text-xs-center>
                   <v-layout row wrap justify-end>
                     <v-flex xs12 lg4 xl2>
@@ -143,7 +138,6 @@
 </template>
 <script>
 import { register } from "@/api/user";
-
 export default {
   data: () => ({
     form: {
@@ -163,18 +157,18 @@ export default {
     async onSubmit() {
       this.loading = true;
       try {
-        await register(
-          this.form.firstName,
-          this.form.username,
-          this.form.email,
-          this.form.password,
-          this.form.confirmpassword
-        );
+        await register({
+          firstName: this.form.firstName,
+          lastName: this.form.lastName,
+          username11: this.form.username,
+          email: this.form.email,
+          password: this.form.password
+        });
         this.$router.push({ name: "dashboard" });
       } catch (e) {
         this.showNotification(e);
-        this.loading = false;
       }
+      this.loading = false;
     },
     showNotification(e) {
       this.notification = true;

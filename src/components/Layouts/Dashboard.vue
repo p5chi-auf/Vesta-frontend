@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="dashboard">
     <Header />
     <Sidebar />
     <v-content>
@@ -20,3 +20,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+#dashboard {
+  background-image: url("/img/background/b1.png");
+}
+</style>

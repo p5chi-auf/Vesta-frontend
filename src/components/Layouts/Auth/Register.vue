@@ -152,6 +152,7 @@ export default {
       password: "",
       confirmpassword: ""
     },
+
     loading: false,
     notification: false,
     notificationMessage: "",
@@ -181,6 +182,15 @@ export default {
     showNotification(e) {
       this.notification = true;
       this.notificationMessage = e;
+
+    async registerUser() {
+      this.loading = true;
+      register(this.form);
+      // TODO try to make the request 
+      // TODO in case of seccess save the information and redirect it to dashboad
+      await defaultForm;
+      this.$router.push({ name: "dashboard" });
+      // TODO in case of wrong response show toasted
     }
   }
 };

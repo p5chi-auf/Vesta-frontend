@@ -19,7 +19,6 @@
           </v-card-title>
         </v-layout>
       </v-img>
-
       <v-progress-linear
         v-if="loading"
         :indeterminate="true"

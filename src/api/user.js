@@ -7,4 +7,3 @@ export const login = function(username, password) {
 };
 
 export const register = params => API.post("/user/registration", params);
-// TODO crate new request for fetching users

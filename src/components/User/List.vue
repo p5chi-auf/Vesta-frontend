@@ -47,7 +47,7 @@
 export default {
   data: () => ({
     selected: [],
-    // TODO make the error variable 
+    // TODO make the error variable
     items: [
       {
         id: 1,
@@ -146,6 +146,5 @@ export default {
   // TODO in case of success response put the list from backend to the variable this.items  https://vuejs.org/v2/cookbook/adding-instance-properties.html
   // TODO in case of wrong response show the put the error code in this.error
   // TODO setup the loading false
-
 };
 </script>

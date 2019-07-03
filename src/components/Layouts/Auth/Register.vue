@@ -160,7 +160,7 @@ export default {
         await register({
           firstName: this.form.firstName,
           lastName: this.form.lastName,
-          username11: this.form.username,
+          username: this.form.username,
           email: this.form.email,
           password: this.form.password
         });

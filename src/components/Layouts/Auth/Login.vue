@@ -89,8 +89,6 @@
   </v-flex>
 </template>
 <script>
-import { login } from "@/api/user";
-
 export default {
   data: () => ({
     form: {
@@ -107,10 +105,10 @@ export default {
     async onSubmit() {
       this.loading = true;
       try {
-        // const { accessToken, refreshToken } =
-        await login(this.form.username, this.form.password);
-
-        this.$router.push({ name: "dashboard" });
+        await this.$store.dispatch("auth/login", {
+          username: this.form.username,
+          password: this.form.password
+        });
       } catch (e) {
         this.showNotification(e);
       }

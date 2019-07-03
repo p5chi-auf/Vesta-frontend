@@ -33,6 +33,7 @@
     <v-btn icon large>
       <v-avatar size="42px">
         <img src="/img/avatar/vesta.png" alt="Vesta" />
+        <!-- TODO make the logout button-->
       </v-avatar>
     </v-btn>
   </v-toolbar>

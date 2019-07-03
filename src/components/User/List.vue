@@ -44,6 +44,7 @@
   </div>
 </template>
 <script>
+import { getUserList } from "@/api/user";
 export default {
   data: () => ({
     selected: [],
@@ -138,7 +139,10 @@ export default {
       { text: "E-mail", value: "email" },
       { text: "Password", value: "password" }
     ]
-  })
+  }),
+  async created() {
+    await getUserList();
+  }
   // TODO on component is created  https://vuejs.org/v2/guide/instance.html
   // TODO setup the loading true
   // TODO make in @/api/user.js new function that will fetch the user list https://github.com/axios/axios

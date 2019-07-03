@@ -13,7 +13,6 @@
                         <v-icon class="b">chevron_left</v-icon>
                       </v-btn>
                     </router-link>
-
                     <v-toolbar-title
                       class="t"
                       font-weight-medium.font-italic
@@ -25,23 +24,22 @@
               </v-img>
               <v-progress-linear
                 v-if="loading"
-                :active="isUpdating"
-                class="progress_liniar"
-                color="blue lighten-0"
-                height="3"
-                indeterminate
+                :indeterminate="true"
+                height="3px"
+                class="auth__progress-bar"
               ></v-progress-linear>
             </v-card>
           </v-flex>
           <v-card-text>
             <v-container>
-              <v-form @submit="registerUser">
+              <v-form ref="form" :autocomplete="false">
                 <v-layout row wrap justify-space-between>
                   <v-flex xs12 md7>
                     <v-layout row>
                       <v-flex xs12 md12>
                         <v-text-field
                           v-model="form.firstName"
+                          :disablef="loading"
                           label="Name"
                           required
                         ></v-text-field>
@@ -50,6 +48,7 @@
                     <v-flex xs12 md12>
                       <v-text-field
                         v-model="form.lastName"
+                        :disablef="loading"
                         label="Lastname"
                         required
                       ></v-text-field>
@@ -58,15 +57,15 @@
                   <v-flex hidden-md-and-down xs12 md4 sm12>
                     <img
                       width="100%"
-                      class="mx-auto"
+                      class="logo"
                       src="/img/registration/logo.png"
                     />
                   </v-flex>
                 </v-layout>
-                <v-layout row wrap justify-end> </v-layout>
                 <v-layout row>
                   <v-text-field
                     v-model="form.username"
+                    :disablef="loading"
                     label="Username"
                     required
                   ></v-text-field>
@@ -74,6 +73,7 @@
                 <v-layout row>
                   <v-text-field
                     v-model="form.email"
+                    :disablef="loading"
                     label="Email*"
                     required
                   ></v-text-field>
@@ -81,32 +81,39 @@
                 <v-layout row>
                   <v-text-field
                     v-model="form.password"
-                    :append-icon="show1 ? 'visibility_off' : 'visibility'"
-                    :type="show1 ? 'text' : 'password'"
+                    :append-icon="
+                      itShowPassword ? 'visibility_off' : 'visibility'
+                    "
+                    :type="itShowPassword ? 'text' : 'password'"
                     label="Password"
                     required
-                    @click:append="show1 = !show1"
+                    @click:append="itShowPassword = !itShowPassword"
                   ></v-text-field>
                 </v-layout>
                 <v-layout row>
                   <v-text-field
                     v-model="form.confirmpassword"
-                    :append-icon="show2 ? 'visibility_off' : 'visibility'"
-                    :type="show2 ? 'text' : 'password'"
+                    :append-icon="
+                      itShowConfirmPassword ? 'visibility_off' : 'visibility'
+                    "
+                    :type="itShowConfirmPassword ? 'text' : 'password'"
                     label="Confirm Password"
                     required
-                    @click:append="show2 = !show2"
+                    @click:append="
+                      itShowConfirmPassword = !itShowConfirmPassword
+                    "
                   ></v-text-field>
                 </v-layout>
                 <v-container grid-list-md text-xs-center>
                   <v-layout row wrap justify-end>
                     <v-flex xs12 lg4 xl2>
-                      <v-btn block color="info" @click="clear">
-                        Clear
-                      </v-btn>
-                    </v-flex>
-                    <v-flex xs12 lg4 xl2>
-                      <v-btn block color="info" @click="registerUser">
+                      <v-btn
+                        block
+                        color="info"
+                        :loading="loading"
+                        :disabled="loading"
+                        @click="onSubmit"
+                      >
                         SignUp
                       </v-btn>
                     </v-flex>
@@ -116,42 +123,56 @@
             </v-container>
           </v-card-text>
         </v-card>
+        <v-snackbar
+          v-model="notification"
+          top
+          right
+          color="pink"
+          :timeout="3000"
+        >
+          {{ notificationMessage }}
+        </v-snackbar>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 <script>
 import { register } from "@/api/user";
-const defaultForm = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  username: "",
-  password: "",
-  confirmpassword: ""
-};
 export default {
-  props: {},
-  data: function() {
-    return {
-      loading: false,
-      show1: false,
-      show2: false,
-      form: defaultForm
-    };
-  },
-  methods: {
-    clear() {
-      this.form = defaultForm;
+  data: () => ({
+    form: {
+      firstName: "",
+      username: "",
+      email: "",
+      password: "",
+      confirmpassword: ""
     },
-    async registerUser() {
+    loading: false,
+    notification: false,
+    notificationMessage: "",
+    itShowPassword: false,
+    itShowConfirmPassword: false
+  }),
+  methods: {
+    async onSubmit() {
       this.loading = true;
-      register(this.form);
-      //  try to make the request
-      //  TODO in case of success save the information and redirect it to dashboad
-      await defaultForm;
-      this.$router.push({ name: "dashboard" });
-      //  in case of wrong response show toasted
+      try {
+        await register({
+          firstName: this.form.firstName,
+          lastName: this.form.lastName,
+          username: this.form.username,
+          email: this.form.email,
+          password: this.form.password
+        });
+        this.$router.push({ name: "dashboard" });
+      } catch (e) {
+        this.showNotification(e);
+      }
+      this.loading = false;
+    },
+    showNotification(e) {
+      this.notification = true;
+      this.notificationMessage = e;
     }
   }
 };

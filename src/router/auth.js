@@ -12,5 +12,6 @@ export default [
     name: "forgotpassword",
     component: ForgotPassword
   },
-  { path: "register", name: "register", component: Register }
+  { path: "register", name: "register", component: Register },
+  { path: "/", redirect: { name: "login" } }
 ];

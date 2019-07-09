@@ -1,11 +1,5 @@
 <template>
-  <v-navigation-drawer
-    v-model="drawer"
-    fixed
-    clipped
-    class="grey lighten-4"
-    app
-  >
+  <v-navigation-drawer fixed clipped class="grey lighten-4" app>
     <v-list>
       <v-list-group
         v-for="item in items"
@@ -45,7 +39,6 @@
 export default {
   data() {
     return {
-      drawer: null,
       items: [
         {
           action: "account_circle",

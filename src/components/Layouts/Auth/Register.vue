@@ -39,8 +39,12 @@
                       <v-flex xs12 md12>
                         <v-text-field
                           v-model="form.firstName"
+                          v-validate="{ min: 2, max: 25 }"
                           :disablef="loading"
-                          label="Name"
+                          :counter="25"
+                          :error-messages="errors.collect('firstName')"
+                          data-vv-name="firstName"
+                          label="First name"
                           required
                         ></v-text-field>
                       </v-flex>
@@ -48,8 +52,12 @@
                     <v-flex xs12 md12>
                       <v-text-field
                         v-model="form.lastName"
+                        v-validate="{ min: 2, max: 25 }"
                         :disablef="loading"
-                        label="Lastname"
+                        :counter="25"
+                        :error-messages="errors.collect('lastName')"
+                        data-vv-name="lastName"
+                        label="Last name"
                         required
                       ></v-text-field>
                     </v-flex>
@@ -65,7 +73,11 @@
                 <v-layout row>
                   <v-text-field
                     v-model="form.username"
+                    v-validate="{ min: 5, max: 25 }"
                     :disablef="loading"
+                    :counter="25"
+                    :error-messages="errors.collect('username')"
+                    data-vv-name="username"
                     label="Username"
                     required
                   ></v-text-field>
@@ -73,7 +85,10 @@
                 <v-layout row>
                   <v-text-field
                     v-model="form.email"
+                    v-validate="'email'"
                     :disablef="loading"
+                    :error-messages="errors.collect('email')"
+                    data-vv-name="email"
                     label="Email*"
                     required
                   ></v-text-field>
@@ -81,12 +96,16 @@
                 <v-layout row>
                   <v-text-field
                     v-model="form.password"
+                    v-validate="'password_complexity'"
                     :append-icon="
                       itShowPassword ? 'visibility_off' : 'visibility'
                     "
                     :type="itShowPassword ? 'text' : 'password'"
+                    :disablef="loading"
+                    :counter="32"
+                    :error-messages="errors.collect('password')"
+                    data-vv-name="password"
                     label="Password"
-                    required
                     @click:append="itShowPassword = !itShowPassword"
                   ></v-text-field>
                 </v-layout>
@@ -97,8 +116,13 @@
                       itShowConfirmPassword ? 'visibility_off' : 'visibility'
                     "
                     :type="itShowConfirmPassword ? 'text' : 'password'"
+                    :disablef="loading"
+                    :counter="32"
+                    :error-messages="errors.collect('confirmpassword')"
+                    data-vv-name="confirmpassword"
                     label="Confirm Password"
                     required
+                    :rules="[comparePassword]"
                     @click:append="
                       itShowConfirmPassword = !itShowConfirmPassword
                     "
@@ -153,6 +177,13 @@ export default {
     itShowPassword: false,
     itShowConfirmPassword: false
   }),
+  computed: {
+    comparePassword() {
+      return this.form.password !== this.form.confirmpassword
+        ? "Password do not match"
+        : "";
+    }
+  },
   methods: {
     async onSubmit() {
       this.loading = true;

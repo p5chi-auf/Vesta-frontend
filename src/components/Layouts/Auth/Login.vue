@@ -30,21 +30,30 @@
           <v-card-text>
             <v-text-field
               v-model="form.username"
+              v-validate="{ min: 5, max: 25 }"
+              :counter="25"
               :disabled="loading"
+              data-vv-name="username"
               prepend-icon="person"
               name="username"
               label="Username"
               type="text"
               required
+              :error-messages="errors.collect('username')"
             ></v-text-field>
             <v-text-field
               id="password"
               v-model="form.password"
+              v-validate="{ min: 8, max: 32 }"
+              :counter="32"
               :disabled="loading"
+              data-vv-name="password"
               prepend-icon="lock"
               name="password"
               label="Password"
               type="password"
+              required
+              :error-messages="errors.collect('password')"
             ></v-text-field>
             <v-checkbox
               v-model="form.remember"
@@ -101,8 +110,11 @@ export default {
     notification: false,
     drawer: null
   }),
+
   methods: {
     async onSubmit() {
+      const isValid = await this.$validator.validateAll();
+      if (!isValid) return;
       this.loading = true;
       try {
         await this.$store.dispatch("auth/login", {

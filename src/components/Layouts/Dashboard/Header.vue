@@ -6,21 +6,10 @@
     app
     fixed
   >
-    <!--    <v-btn-icon fab>-->
-    <!--      <v-icon>-->
-    <!--        <img src="/img/registration/logo.png" />-->
-    <!--      </v-icon>-->
-    <!--    </v-btn-icon>-->
-
     <v-toolbar-title class="ml-0 pl-3 toolbar">
       <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
 
-      <span class="title ml-3 mr-5">
-        Vesta
-        <!--        <span class="font-weight-light">-->
-        <!--          Users-->
-        <!--        </span>-->
-      </span>
+      <span class="title ml-3 mr-5">config Vesta </span>
     </v-toolbar-title>
 
     <v-text-field

@@ -23,10 +23,12 @@
       <v-card-text>
         <v-form>
           <v-text-field
-            prepend-icon="lock"
+            v-validate="'email'"
+            prepend-icon="mail"
             name="password"
             label="Email address"
-            type="password"
+            :error-messages="errors.collect('email')"
+            data-vv-name="email"
           ></v-text-field>
           <template>
             <v-list-tile-title xs class="font-weight-medium"

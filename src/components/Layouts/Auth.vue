@@ -11,6 +11,6 @@
 </template>
 <style scoped>
 #inspire {
-  background-image: url("/img/registration/of.jpg");
+  background-image: url("/img/registration/comp.jpeg");
 }
 </style>

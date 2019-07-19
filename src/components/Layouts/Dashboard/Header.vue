@@ -9,7 +9,7 @@
     <v-toolbar-title class="ml-0 pl-3 toolbar">
       <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
 
-      <span class="title ml-3 mr-5">config Vesta </span>
+      <span class="title ml-3 mr-5"> Vesta </span>
     </v-toolbar-title>
 
     <v-text-field
@@ -63,11 +63,10 @@
         </v-container>
       </v-card>
     </v-menu>
-    <!--    </v-menu>-->
   </v-toolbar>
 </template>
 <script>
-//TODO import mapMutations from vuex
+// import mapMutations from vuex
 import { mapMutations } from "vuex";
 export default {
   data: () => ({
@@ -82,8 +81,8 @@ export default {
     logout() {
       this.mutateTokens({});
       this.$router.push("/auth/login");
-      //TODO call mutation with empty tokens
-      //TODO after it redirect it to auth page
+      // call mutation with empty tokens
+      // after it redirect it to auth page
     }
   }
 };

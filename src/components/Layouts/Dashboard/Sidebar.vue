@@ -18,18 +18,16 @@
           </v-list-tile>
         </template>
 
-        <v-list-tile
-          v-for="subItem in item.items"
-          :key="subItem.title"
-          @click="items"
-        >
-          <v-list-tile-content>
-            <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-          </v-list-tile-content>
+        <v-list-tile v-for="subItem in item.items" :key="subItem.title">
+          <router-link :to="{ name: subItem.route }">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
+            </v-list-tile-content>
 
-          <v-list-tile-action>
-            <v-icon>{{ subItem.action }}</v-icon>
-          </v-list-tile-action>
+            <v-list-tile-action>
+              <v-icon>{{ subItem.action }}</v-icon>
+            </v-list-tile-action>
+          </router-link>
         </v-list-tile>
       </v-list-group>
     </v-list>
@@ -44,9 +42,9 @@ export default {
           action: "account_circle",
           title: "User",
           items: [
-            { title: "List" },
-            { title: "Right access" },
-            { title: "Preferences" }
+            { title: "List", route: "user" },
+            { title: "Right access", route: "access" },
+            { title: "Preferences", route: "preferences" }
           ]
         },
         {
@@ -54,9 +52,9 @@ export default {
           title: "Pentalog CHI",
 
           items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
+            { title: "Floor 1", route: "floor-view" },
+            { title: "Floor 2", route: "floor-view" },
+            { title: "Floor 3", route: "floor-view" }
           ]
         },
         {

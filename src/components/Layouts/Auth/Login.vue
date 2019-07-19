@@ -44,7 +44,7 @@
             <v-text-field
               id="password"
               v-model="form.password"
-              v-validate="{ min: 8, max: 32 }"
+              v-validate="{ min: 5, max: 32 }"
               :counter="32"
               :disabled="loading"
               data-vv-name="password"

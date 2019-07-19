@@ -1,2 +1,4 @@
 import UserRoutes from "./user";
-export default [...UserRoutes];
+import FloorRoutes from "./floor";
+
+export default [...UserRoutes, ...FloorRoutes];

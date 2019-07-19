@@ -11,8 +11,9 @@
       <v-toolbar-title class="ml-0 pl-3 toolbar">
         <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
 
-        <span class="title ml-3 mr-5">config Vesta </span>
-      </v-toolbar-title>
+
+      <span class="title ml-3 mr-5"> Vesta </span>
+    </v-toolbar-title>
 
       <v-text-field
         flat
@@ -77,6 +78,7 @@
 //TODO import mapMutations from vuex
 import { mapMutations, mapGetters } from "vuex";
 import UserCreateUpdateForm from "@/components/User/UserCreateUpdateForm";
+
 export default {
   components: { UserCreateUpdateForm },
   data: () => ({
@@ -104,6 +106,8 @@ export default {
     open() {
       console.log("open");
       this.isUserModalOpened = true;
+      // call mutation with empty tokens
+      // after it redirect it to auth page
     }
   }
 };

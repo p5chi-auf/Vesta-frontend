@@ -1,5 +1,7 @@
 import List from "@/components/User/List";
 import Layout from "@/components/User/Layout";
+import Preferences from "@/components/User/Preferences";
+import Rightaccess from "@/components/User/Rightaccess";
 
 export default [
   {
@@ -19,5 +21,15 @@ export default [
         component: List
       }
     ]
+  },
+  {
+    path: "access",
+    name: "access",
+    component: Rightaccess
+  },
+  {
+    path: "preferences",
+    name: "preferences",
+    component: Preferences
   }
 ];

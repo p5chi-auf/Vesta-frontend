@@ -6,13 +6,11 @@
       <v-toolbar-title v-if="selected.length > 0"
         >Users selected: {{ selected.length }}</v-toolbar-title
       >
-
       <v-spacer></v-spacer>
       <div v-if="selected.length > 0">
-        <v-btn title="Delete" icon @click="deleteItem">
+        <v-btn title="Delete" icon @click="isConfirmRemoveShowed = true">
           <v-icon>delete</v-icon>
         </v-btn>
-
         <v-btn
           v-if="selected.length === 1"
           title="Edit"
@@ -28,12 +26,11 @@
         </v-btn>
       </div>
     </v-toolbar>
-
     <v-data-table
       v-model="selected"
       :loading="loading"
       :headers="headers"
-      :items="items"
+      :items="getUsersList"
       select-all
       class="elevation-1"
     >
@@ -53,20 +50,23 @@
         <td class="justify-center layout px-0"></td>
       </template>
     </v-data-table>
+    <ConfirmDialog v-if="isConfirmRemoveShowed" @ok="deleteItem" />
   </div>
 </template>
 <script>
-import { getUserList, deleteUser } from "@/api/user";
+import { deleteUser } from "@/api/user";
+import ConfirmDialog from "@/components/Dialogs/ConfirmDialog";
+import { mapActions, mapGetters } from "vuex";
 import UserCreateUpdateForm from "./UserCreateUpdateForm";
 export default {
-  components: { UserCreateUpdateForm },
+  components: { UserCreateUpdateForm, ConfirmDialog },
   data: () => ({
     selected: [],
     loading: false,
+    isConfirmRemoveShowed: false,
     dialog: false,
     error: "",
     // TODO make the error variable
-    items: [],
     headers: [
       { text: "ID", align: "left", sortable: true, value: "name" },
       { text: "First Name", value: "firstname" },
@@ -75,39 +75,31 @@ export default {
       { text: "E-mail", value: "email" }
     ]
   }),
+  computed: {
+    ...mapGetters({
+      getUsersList: "user/getUserList"
+    })
+  },
   created() {
-    this.fetchUsers();
+    this.fetchUserList();
   },
   methods: {
-    async fetchUsers() {
-      this.loading = true;
-      try {
-        const { data } = await getUserList();
-        this.items = data;
-      } catch (error) {
-        this.error = error;
-      }
-      this.loading = false;
-    },
+    ...mapActions({
+      fetchUserList: "user/fetchUsers"
+    }),
     async deleteItem() {
       try {
         for (let i in this.selected) {
-          console.log(this.selected[i]);
           await deleteUser(this.selected[i].id);
           delete this.selected[i];
+          this.fetchUserList();
         }
-        this.fetchUsers();
       } catch (error) {
         this.error = error;
       }
+      this.isConfirmRemoveShowed = false;
+      this.$emit("cancel", false);
     }
   }
-  // TODO on component is created  https://vuejs.org/v2/guide/instance.html
-  // TODO setup the loading true
-  // TODO make in @/api/user.js new function that will fetch the user list https://github.com/axios/axios
-  // TODO try to call this api function  https://www.w3schools.com/js/js_errors.asp
-  // TODO in case of success response put the list from backend to the variable this.items  https://vuejs.org/v2/cookbook/adding-instance-properties.html
-  // TODO in case of wrong response show the put the error code in this.error
-  // TODO setup the loading false
 };
 </script>

@@ -1,0 +1,3402 @@
+[
+  {
+    "position": [
+      0,
+      0
+    ],
+    "scale": 1.4,
+    "image": "/img/svg/Plan.svg",
+    "editable": false,
+    "rotation": 0
+  },
+  {
+    "position": [
+      362,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      397,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      362,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      397,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      362,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      397,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      362,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      397,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      362,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      397,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      367,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      402,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      367,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      402,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      489,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      524,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      489,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      524,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      367,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      402,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      489,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      524,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      367,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      402,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      524,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      489,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      367,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      402,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      524,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      489,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      362,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      397,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      362,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      397,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      362,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      397,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      362,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      397,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      362,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      397,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      651,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      686,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      762,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      797,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      651,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      686,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      762,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      797,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      651,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      686,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      762,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      797,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      651,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      686,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      762,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      797,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      651,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      686,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      762,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      797,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      656,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      691,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      767,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      801,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      656,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      691,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      767,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      801,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      656,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      691,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      767,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      801,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      656,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      691,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      767,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      801,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      656,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      691,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      767,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      801,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      651,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      686,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      762,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      797,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      651,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      686,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      762,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      797,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      651,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      686,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      762,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      797,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      651,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      686,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      762,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      797,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      651,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      686,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      762,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      797,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      926,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      961,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1037,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1072,
+      33
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      926,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      961,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1037,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1072,
+      89
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      926,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      961,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1037,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1072,
+      177
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      926,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      961,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1037,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1072,
+      287
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      926,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      961,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1037,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1072,
+      343
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      931,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      966,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1042,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1077,
+      59
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      931,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      966,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1042,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1077,
+      115
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      931,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      966,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1042,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1077,
+      203
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      931,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      966,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1042,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1077,
+      313
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      931,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      966,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1042,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1077,
+      369
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      926,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      961,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1037,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1072,
+      33
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      926,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      961,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1037,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1072,
+      89
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      926,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      961,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1037,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1072,
+      177
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      926,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      961,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1037,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1072,
+      287
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      926,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      961,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1037,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1072,
+      343
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      323,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      288,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      332,
+      732
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      297,
+      732
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      332,
+      788
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      297,
+      788
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      732
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      732
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      788
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      788
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      524,
+      646
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      489,
+      646
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      328,
+      646
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      293,
+      646
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      337,
+      758
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      302,
+      758
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      337,
+      814
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      302,
+      814
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      524,
+      758
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      489,
+      758
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      524,
+      814
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      489,
+      814
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      323,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      288,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      332,
+      732
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      297,
+      732
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      332,
+      788
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      297,
+      788
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      732
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      732
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      519,
+      788
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      484,
+      788
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      673,
+      630
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      673,
+      685
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      673,
+      798
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      638,
+      798
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      678,
+      656
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      678,
+      711
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      678,
+      824
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      643,
+      824
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      673,
+      630
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      673,
+      685
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      673,
+      798
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      638,
+      798
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      778,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      813,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      778,
+      676
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      813,
+      676
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      778,
+      742
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      813,
+      742
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      778,
+      798
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      813,
+      798
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      951,
+      798
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      951,
+      742
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1038,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1073,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1038,
+      676
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1073,
+      676
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1038,
+      742
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1073,
+      742
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1038,
+      798
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1073,
+      798
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      783,
+      646
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      818,
+      646
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      783,
+      702
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      818,
+      702
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      783,
+      768
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      818,
+      768
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      783,
+      824
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      818,
+      824
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      956,
+      824
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      956,
+      768
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1043,
+      646
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1078,
+      646
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1043,
+      702
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1078,
+      702
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1043,
+      768
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1078,
+      768
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1043,
+      824
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1078,
+      824
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      778,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      813,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      778,
+      676
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      813,
+      676
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      778,
+      742
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      813,
+      742
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      778,
+      798
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      813,
+      798
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      951,
+      798
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      951,
+      742
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1038,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1073,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1038,
+      676
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1073,
+      676
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1038,
+      742
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1073,
+      742
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1038,
+      798
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1073,
+      798
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1371,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1335,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1371,
+      676
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1335,
+      676
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1335,
+      742
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1371,
+      742
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1335,
+      798
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1371,
+      798
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1214,
+      620
+    ],
+    "scale": 0.5,
+    "rotation": 90,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1214,
+      742
+    ],
+    "scale": 0.5,
+    "rotation": 90,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1214,
+      777
+    ],
+    "scale": 0.5,
+    "rotation": 90,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1214,
+      750
+    ],
+    "scale": 0.5,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1376,
+      646
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1340,
+      646
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1376,
+      702
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1340,
+      702
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1340,
+      768
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1376,
+      768
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1340,
+      824
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1376,
+      824
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1184,
+      625
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1184,
+      747
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1184,
+      782
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1219,
+      776
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1371,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1335,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1371,
+      676
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1335,
+      676
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1335,
+      742
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1371,
+      742
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1335,
+      798
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1371,
+      798
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1158,
+      620
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1158,
+      742
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1158,
+      777
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1214,
+      750
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1416,
+      15
+    ],
+    "scale": 0.5,
+    "rotation": 90,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1386,
+      20
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1361,
+      15
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1388,
+      111
+    ],
+    "scale": 0.5,
+    "rotation": 90,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1444,
+      111
+    ],
+    "scale": 0.5,
+    "rotation": 90,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1358,
+      116
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1414,
+      116
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1334,
+      111
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1388,
+      111
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1416,
+      279
+    ],
+    "scale": 0.5,
+    "rotation": 90,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1386,
+      284
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1360,
+      279
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1388,
+      384
+    ],
+    "scale": 0.5,
+    "rotation": 90,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1444,
+      384
+    ],
+    "scale": 0.5,
+    "rotation": 90,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1358,
+      389
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1414,
+      389
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1332,
+      384
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1388,
+      384
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1364,
+      435
+    ],
+    "scale": 0.7206959148029705,
+    "rotation": 0,
+    "image": "/img/svg/table.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1383,
+      484
+    ],
+    "scale": 0.027,
+    "rotation": 0,
+    "image": "/img/svg/user.svg",
+    "editable": true
+  },
+  {
+    "position": [
+      1364,
+      435
+    ],
+    "scale": 0.2,
+    "rotation": 0,
+    "image": "/img/svg/pc.svg",
+    "editable": true
+  }
+]

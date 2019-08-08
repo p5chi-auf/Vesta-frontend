@@ -34,6 +34,7 @@
   </v-navigation-drawer>
 </template>
 <script>
+import { GetCompany } from "@/api/company";
 export default {
   data() {
     return {
@@ -46,119 +47,22 @@ export default {
             { title: "Right access", route: "access" },
             { title: "Preferences", route: "preferences" }
           ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog CHI",
-
-          items: [
-            { title: "Floor 1", route: "floor-view" },
-            { title: "Floor 2", route: "floor-view" },
-            { title: "Floor 3", route: "floor-view" }
-          ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog ORL",
-
-          items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
-          ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog CLU",
-
-          items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
-          ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog BRA",
-
-          items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
-          ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog IAS",
-
-          items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
-          ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog BUC",
-
-          items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
-          ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog PAR",
-
-          items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
-          ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog FRA",
-
-          items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
-          ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog BOS",
-
-          items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
-          ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog HAN",
-
-          items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
-          ]
-        },
-        {
-          action: "location_city",
-          title: "Pentalog MEX",
-
-          items: [
-            { title: "Floor 1" },
-            { title: "Floor 2" },
-            { title: "Floor 3" }
-          ]
         }
       ]
     };
+  },
+  async created() {
+    const companies = (await GetCompany()).data;
+    companies.forEach(company => {
+      this.items.push({
+        title: company.name,
+        action: "location_city",
+        items: company.floors.map(floor => ({
+          title: floor.name,
+          route: "floor-view"
+        }))
+      });
+    });
   }
 };
 </script>

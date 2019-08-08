@@ -5,6 +5,7 @@ export const login = function(username, password) {
     password
   });
 };
+
 export const deleteUser = id => API.delete(`/user/${id}`);
 export const editUser = (id, userData) => API.put(`/user/${id}`, userData);
 export const register = params => API.post("/user/registration", params);

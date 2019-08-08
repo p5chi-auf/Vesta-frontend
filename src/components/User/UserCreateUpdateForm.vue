@@ -83,33 +83,6 @@
               </v-container>
             </v-flex>
 
-            <v-flex md3>
-              <v-container class="v-card-profile">
-                <v-avatar slot="offset" class="mx-auto d-block" size="130">
-                  <img
-                    src="https://demos.creative-tim.com/vue-material-dashboard/img/marc.aba54d65.jpg"
-                    alt=""
-                  />
-                </v-avatar>
-                <v-card-text class="text-xs-center">
-                  <v-btn
-                    small
-                    round
-                    color="blue-grey"
-                    class="black--text"
-                    @click.native="openFileDialog"
-                  >
-                    <v-icon center> cloud_upload</v-icon>
-                  </v-btn>
-                  <input
-                    id="file-upload"
-                    type="file"
-                    style="display:none"
-                    @change="onFileChange"
-                  />
-                </v-card-text>
-              </v-container>
-            </v-flex>
             <v-container grid-list-md text-xs-center>
               <v-layout wrap justify-end>
                 <v-flex xs12 md2>
@@ -188,17 +161,6 @@ export default {
       }
       this.$emit("input", false);
       this.loading = false;
-    },
-    openFileDialog() {
-      document.getElementById("file-upload").click();
-    },
-    onFileChange(e) {
-      var files = e.target.files || e.dataTransfer.files;
-      if (files.length > 0) {
-        for (var i = 0; i < files.length; i++) {
-          this.formData.append("file", files[i], files[i].name);
-        }
-      }
     }
   }
 };

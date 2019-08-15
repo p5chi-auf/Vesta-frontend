@@ -1,7 +1,6 @@
 <template>
   <div>
     <v-app-bar
-      v-model="drawer"
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       color="teal lighten-1"
       dark
@@ -9,7 +8,7 @@
       fixed
     >
       <v-toolbar-title class="ml-0 pl-3 toolbar">
-        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        <!--        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>-->
 
         <span class="title ml-3 mr-5"> Vesta </span>
       </v-toolbar-title>
@@ -31,7 +30,7 @@
       </v-btn>
 
       <v-menu dark sesion="1000" transition="slide-y-transition" bottom>
-        <template v-slot:activator="{ on }">
+        <template slot="activator">
           <v-btn fab icon avatar v-on="on">
             <v-avatar>
               <img src="/img/avatar/user1.png" alt="Vesta" />

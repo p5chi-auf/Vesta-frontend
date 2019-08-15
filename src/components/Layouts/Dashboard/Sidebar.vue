@@ -17,7 +17,7 @@
         <v-list-item
           v-for="subItem in item.items"
           :key="subItem.title"
-          :to="{ name: subItem.route }"
+          :to="subItem.route"
         >
           <v-list-item-content>
             <v-list-item-title v-text="subItem.title"></v-list-item-title>
@@ -37,9 +37,9 @@ export default {
           action: "account_circle",
           title: "User",
           items: [
-            { title: "List", route: "user" },
-            { title: "Right access", route: "access" },
-            { title: "Preferences", route: "preferences" }
+            { title: "List", route: { name: "user" } },
+            { title: "Right access", route: { name: "access" } },
+            { title: "Preferences", route: { name: "preferences" } }
           ]
         }
       ]
@@ -53,7 +53,7 @@ export default {
         action: "location_city",
         items: company.floors.map(floor => ({
           title: floor.name,
-          route: "floor-view"
+          route: { name: "floor-view", params: { floorId: floor.id } }
         }))
       });
     });

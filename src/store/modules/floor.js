@@ -7,8 +7,8 @@ export default {
     objects: []
   },
   actions: {
-    async fetchFloorObjects({ commit }) {
-      const { data } = await getFloorObjects(1);
+    async fetchFloorObjects({ commit }, floorId) {
+      const { data } = await getFloorObjects(floorId);
       commit("updateFloorObjects", data);
     }
   },

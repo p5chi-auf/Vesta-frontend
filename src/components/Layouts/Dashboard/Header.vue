@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar
+    <v-app-bar
       v-model="drawer"
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       color="teal lighten-1"
@@ -9,7 +9,7 @@
       fixed
     >
       <v-toolbar-title class="ml-0 pl-3 toolbar">
-        <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
+        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
         <span class="title ml-3 mr-5"> Vesta </span>
       </v-toolbar-title>
@@ -43,17 +43,11 @@
             <v-layout row justify-content-end> </v-layout>
             <v-list>
               <v-layout row>
-                <div class="mx-auto">
+                <div class="mx-auto text-xs-center">
                   <img src="/img/avatar/user1b.png" width="130px" />
-                  <v-list>
-                    <v-layout row wrap justify-space-between>
-                      <v-list-tile-title
-                        ><h2 font-weight-bold display-4>
-                          Trifan Vadim
-                        </h2></v-list-tile-title
-                      >
-                    </v-layout>
-                  </v-list>
+                  <h2 font-weight-bold display-4 center>
+                    {{ getUserInfo.firstName }} {{ getUserInfo.lastName }}
+                  </h2>
                 </div>
               </v-layout>
               <v-layout justify-space-betwyarneen>
@@ -65,7 +59,7 @@
           </v-container>
         </v-card>
       </v-menu>
-    </v-toolbar>
+    </v-app-bar>
     <UserCreateUpdateForm
       v-model="isUserModalOpened"
       :user-id="getUserInfo.id"

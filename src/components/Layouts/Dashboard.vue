@@ -17,6 +17,9 @@ export default {
   components: {
     Header,
     Sidebar
+  },
+  created() {
+    this.$store.dispatch("auth/getCurrentUserInfo");
   }
 };
 </script>

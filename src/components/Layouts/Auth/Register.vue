@@ -161,7 +161,6 @@
   </v-container>
 </template>
 <script>
-import { register } from "@/api/user";
 export default {
   data: () => ({
     form: {
@@ -188,7 +187,7 @@ export default {
     async onSubmit() {
       this.loading = true;
       try {
-        await register({
+        await this.$store.dispatch("auth/register", {
           firstName: this.form.firstName,
           lastName: this.form.lastName,
           username: this.form.username,

@@ -1,4 +1,4 @@
-import { login, getCurrentUserInfo } from "@/api/user";
+import { login, getCurrentUserInfo, register } from "@/api/user";
 import router from "@/router";
 export default {
   namespaced: true,
@@ -11,15 +11,27 @@ export default {
     async login({ commit }, { username, password }) {
       try {
         const response = await login(username, password);
-
         commit("mutateTokens", response.data);
-        const userInfo = await getCurrentUserInfo();
-        commit("mutateUserInfo", userInfo.data);
-
         router.push({ name: "dashboard" });
       } catch (error) {
         throw error;
       }
+    },
+    async register({ dispatch }, data) {
+      try {
+        await register(data);
+        await dispatch("login", {
+          username: data.username,
+          password: data.password
+        });
+        router.push({ name: "dashboard" });
+      } catch (error) {
+        throw error;
+      }
+    },
+    async getCurrentUserInfo({ commit }) {
+      const userInfo = await getCurrentUserInfo();
+      commit("mutateUserInfo", userInfo.data);
     }
   },
   mutations: {

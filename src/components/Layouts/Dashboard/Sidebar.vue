@@ -9,26 +9,20 @@
         no-action
       >
         <template slot="activator">
-          <v-list-tile>
-            <v-list-tile-content>
-              <v-list-tile-title>
-                <v-list-tile-title>{{ item.title }} </v-list-tile-title>
-              </v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title"></v-list-item-title>
+          </v-list-item-content>
         </template>
 
-        <v-list-tile v-for="subItem in item.items" :key="subItem.title">
-          <router-link :to="{ name: subItem.route }">
-            <v-list-tile-content>
-              <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-            </v-list-tile-content>
-
-            <v-list-tile-action>
-              <v-icon>{{ subItem.action }}</v-icon>
-            </v-list-tile-action>
-          </router-link>
-        </v-list-tile>
+        <v-list-item
+          v-for="subItem in item.items"
+          :key="subItem.title"
+          :to="{ name: subItem.route }"
+        >
+          <v-list-item-content>
+            <v-list-item-title v-text="subItem.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list-group>
     </v-list>
   </v-navigation-drawer>

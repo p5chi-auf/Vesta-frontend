@@ -1,7 +1,14 @@
 <template>
   <v-container fluid>
     <v-card>
-      <v-card-title><h4>111</h4></v-card-title>
+      <v-card-title
+        ><h4>
+          Object
+          <v-btn icon>
+            <v-icon>close</v-icon>
+          </v-btn>
+        </h4></v-card-title
+      >
       <v-divider></v-divider>
       <v-list dense>
         <v-list-item>

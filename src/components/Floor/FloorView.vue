@@ -6,6 +6,7 @@
     <v-col md="2">
       <FloorItemView />
     </v-col>
+    <FloorItemAddButton />
   </v-row>
 </template>
 
@@ -14,9 +15,11 @@ import { fabric } from "fabric";
 import { mapGetters } from "vuex";
 import { editObject } from "@/api/floor";
 import FloorItemView from "./FloorItemView";
+import FloorItemAddButton from "./FloorItemAddButton";
 export default {
   components: {
-    FloorItemView
+    FloorItemView,
+    FloorItemAddButton
   },
   props: {
     floorId: {
@@ -39,15 +42,18 @@ export default {
     );
     const floorView = document.createElement("canvas");
     const el = document.getElementById("floor_canvas_view");
-
     floorView.id = "floor_view";
     el.append(floorView);
     this.canvasEl = new fabric.Canvas("floor_view");
+    this.canvasEl.on("selection:created", e => {
+      if (e.target.type === "activeSelection") {
+        this.canvasEl.discardActiveObject();
+      } else {
+        //do nothing
+      }
+    });
     this.canvasEl.setHeight(700);
     this.canvasEl.setWidth(1100);
-    this.canvasEl.selection = false;
-
-    // this.canvasEl.selectionFullyContained = true;
     this.canvasEl.transparentCorners = false;
     this.elements.forEach(element => {
       fabric.Image.fromURL(element.image, oImg => {

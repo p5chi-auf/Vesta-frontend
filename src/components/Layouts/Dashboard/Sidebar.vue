@@ -41,6 +41,11 @@ export default {
             { title: "Right access", route: { name: "access" } },
             { title: "Preferences", route: { name: "preferences" } }
           ]
+        },
+        {
+          action: "view_carousel",
+          title: "Agencies Management",
+          items: [{ title: "Agencies List", route: { name: "agencies-list" } }]
         }
       ]
     };

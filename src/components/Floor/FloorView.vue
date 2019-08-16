@@ -63,7 +63,7 @@ export default {
       });
 
       this.canvasEl.setHeight(700);
-      this.canvasEl.setWidth(1100);
+      this.canvasEl.setWidth(1150);
       this.canvasEl.transparentCorners = false;
       this.elements.forEach(element => {
         fabric.Image.fromURL(element.image, oImg => {
@@ -79,13 +79,15 @@ export default {
             this.selected = element;
           });
           oImg.on("modified", el => {
-            editObject(element.id, {
+            this.$set(this, "selected", {
+              id: element.id,
               position: [el.target.left, el.target.top],
               scale: el.target.scaleX,
               rotation: el.target.angle,
               image: element.image,
               editable: true
             });
+            editObject(element.id, this.selected);
           });
           oImg.editable = true;
           this.canvasEl.add(oImg);

@@ -35,6 +35,7 @@
       :footer-props="{
         rowsPerPageItems: 100
       }"
+      show-select
     >
       <template v-slot:items="props">
         <td>

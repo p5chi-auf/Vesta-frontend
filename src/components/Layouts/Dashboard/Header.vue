@@ -57,8 +57,8 @@
               </v-layout>
               <v-layout justify-space-betwyarneen>
                 <v-spacer></v-spacer>
-                <v-btn color="info" @click="open">View Profile</v-btn>
-                <v-btn color="red" @click="logout">Log Out</v-btn>
+                <v-btn text color="info" @click="open">View Profile</v-btn>
+                <v-btn text color="red" @click="logout">Log Out</v-btn>
               </v-layout>
             </v-list>
           </v-container>

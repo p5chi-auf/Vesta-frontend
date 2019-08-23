@@ -31,8 +31,11 @@
       :loading="loading"
       :headers="headers"
       :items="getUsersList"
-      select-all
       class="elevation-1"
+      :footer-props="{
+        rowsPerPageItems: 100
+      }"
+      show-select
     >
       <template v-slot:items="props">
         <td>
@@ -68,9 +71,9 @@ export default {
     error: "",
     // TODO make the error variable
     headers: [
-      { text: "ID", align: "left", sortable: true, value: "name" },
-      { text: "First Name", value: "firstname" },
-      { text: "Last Name", value: "lastname" },
+      { text: "ID", align: "left", sortable: true, value: "id" },
+      { text: "First Name", value: "firstName" },
+      { text: "Last Name", value: "lastName" },
       { text: "User Name", value: "username" },
       { text: "E-mail", value: "email" }
     ]

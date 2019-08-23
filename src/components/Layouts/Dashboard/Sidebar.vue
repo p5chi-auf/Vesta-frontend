@@ -9,26 +9,20 @@
         no-action
       >
         <template slot="activator">
-          <v-list-tile>
-            <v-list-tile-content>
-              <v-list-tile-title>
-                <v-list-tile-title>{{ item.title }} </v-list-tile-title>
-              </v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title"></v-list-item-title>
+          </v-list-item-content>
         </template>
 
-        <v-list-tile v-for="subItem in item.items" :key="subItem.title">
-          <router-link :to="{ name: subItem.route }">
-            <v-list-tile-content>
-              <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-            </v-list-tile-content>
-
-            <v-list-tile-action>
-              <v-icon>{{ subItem.action }}</v-icon>
-            </v-list-tile-action>
-          </router-link>
-        </v-list-tile>
+        <v-list-item
+          v-for="subItem in item.items"
+          :key="subItem.title"
+          :to="subItem.route"
+        >
+          <v-list-item-content>
+            <v-list-item-title v-text="subItem.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list-group>
     </v-list>
   </v-navigation-drawer>
@@ -43,10 +37,15 @@ export default {
           action: "account_circle",
           title: "User",
           items: [
-            { title: "List", route: "user" },
-            { title: "Right access", route: "access" },
-            { title: "Preferences", route: "preferences" }
+            { title: "List", route: { name: "user" } },
+            { title: "Right access", route: { name: "access" } },
+            { title: "Preferences", route: { name: "preferences" } }
           ]
+        },
+        {
+          action: "view_carousel",
+          title: "Agencies Management",
+          items: [{ title: "Agencies List", route: { name: "agencies-list" } }]
         }
       ]
     };
@@ -59,7 +58,7 @@ export default {
         action: "location_city",
         items: company.floors.map(floor => ({
           title: floor.name,
-          route: "floor-view"
+          route: { name: "floor-view", params: { floorId: floor.id } }
         }))
       });
     });

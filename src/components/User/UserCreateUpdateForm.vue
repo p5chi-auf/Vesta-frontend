@@ -30,7 +30,7 @@
                         <v-text-field
                           v-model="form.firstName"
                           v-validate="{ min: 2, max: 25 }"
-                          box
+                          filled
                           label="First Name"
                           name="firstName"
                           :error-messages="errors.collect('firstName')"
@@ -40,7 +40,7 @@
                         <v-text-field
                           v-model="form.lastName"
                           v-validate="{ min: 2, max: 25 }"
-                          box
+                          filled
                           label="Last Name"
                           name="lastName"
                           :error-messages="errors.collect('lastName')"
@@ -50,7 +50,7 @@
                         <v-text-field
                           v-model="form.username"
                           v-validate="{ min: 5, max: 25 }"
-                          box
+                          filled
                           label="User Name"
                           name="username"
                           :error-messages="errors.collect('username')"
@@ -60,7 +60,7 @@
                         <v-text-field
                           v-model="form.email"
                           v-validate="'email'"
-                          box
+                          filled
                           label="Email Address"
                           name="email"
                           :error-messages="errors.collect('email')"
@@ -71,7 +71,7 @@
                           v-model="form.password"
                           v-validate="'password_complexity'"
                           type="password"
-                          box
+                          filled
                           label="Password"
                           name="password"
                           :error-messages="errors.collect('password')"
@@ -86,7 +86,7 @@
             <v-container grid-list-md text-xs-center>
               <v-layout wrap justify-end>
                 <v-flex xs12 md2>
-                  <v-btn flat block color="error" @click="$emit('input', false)"
+                  <v-btn text block color="error" @click="$emit('input', false)"
                     >Close</v-btn
                   >
                 </v-flex>
@@ -96,7 +96,7 @@
                     :loading="loading"
                     :disabled="loading"
                     block
-                    flat
+                    text
                     @click="onSubmit"
                     >Save</v-btn
                   >

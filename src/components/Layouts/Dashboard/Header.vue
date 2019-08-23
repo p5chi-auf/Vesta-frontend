@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar
+    <v-app-bar
       v-model="drawer"
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       color="teal lighten-1"
@@ -9,7 +9,7 @@
       fixed
     >
       <v-toolbar-title class="ml-0 pl-3 toolbar">
-        <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
+        <!--        <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>-->
 
         <span class="title ml-3 mr-5"> Vesta </span>
       </v-toolbar-title>
@@ -46,26 +46,25 @@
                 <div class="mx-auto">
                   <img src="/img/avatar/user1b.png" width="130px" />
                   <v-list>
-                    <v-layout row wrap justify-space-between>
-                      <v-list-tile-title
-                        ><h2 font-weight-bold display-4>
-                          Trifan Vadim
-                        </h2></v-list-tile-title
-                      >
+                    <v-layout row wrap justify-center>
+                      <h2 font-weight-bold display-4>
+                        {{ getUserInfo.firstName }}
+                        {{ getUserInfo.lastName }}
+                      </h2>
                     </v-layout>
                   </v-list>
                 </div>
               </v-layout>
               <v-layout justify-space-betwyarneen>
                 <v-spacer></v-spacer>
-                <v-btn flat color="info" @click="open">View Profile</v-btn>
-                <v-btn flat color="red" @click="logout">Log Out</v-btn>
+                <v-btn text color="info" @click="open">View Profile</v-btn>
+                <v-btn text color="red" @click="logout">Log Out</v-btn>
               </v-layout>
             </v-list>
           </v-container>
         </v-card>
       </v-menu>
-    </v-toolbar>
+    </v-app-bar>
     <UserCreateUpdateForm
       v-model="isUserModalOpened"
       :user-id="getUserInfo.id"

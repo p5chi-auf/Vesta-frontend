@@ -3,7 +3,7 @@
     <Header />
     <Sidebar />
     <v-content>
-      <v-container>
+      <v-container fluid>
         <router-view />
       </v-container>
     </v-content>
@@ -17,6 +17,9 @@ export default {
   components: {
     Header,
     Sidebar
+  },
+  created() {
+    this.$store.dispatch("auth/getCurrentUserInfo");
   }
 };
 </script>

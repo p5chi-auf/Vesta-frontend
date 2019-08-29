@@ -102,9 +102,9 @@ export default {
       try {
         for (let i in this.selected) {
           await deleteUser(this.selected[i].id);
-          delete this.selected[i];
-          await this.fetchUserList();
         }
+        this.$set(this, "selected", []);
+        this.$store.dispatch("user/fetchUsers");
       } catch (error) {
         this.error = error;
       }

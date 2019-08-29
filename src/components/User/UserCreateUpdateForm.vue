@@ -122,12 +122,12 @@ export default {
             email: this.form.email,
             password: this.form.password
           });
-          this.fetchUserList();
         }
       } catch (error) {
         this.error = error;
       }
-      this.$emit("input", false);
+      this.$store.dispatch("user/fetchUsers");
+      this.dialog = false;
       this.loading = false;
     },
     open() {

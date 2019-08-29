@@ -9,55 +9,42 @@
       <v-spacer></v-spacer>
 
       <div v-if="selected.length > 0">
-        <v-btn title="Delete" icon @click="deleteItem">
+        <v-btn title="Delete" icon @click="deleteAgency">
           <v-icon>delete</v-icon>
         </v-btn>
 
-        <v-btn
-          v-if="selected.length === 1"
-          title="Edit"
-          icon
-          @click="dialog = true"
-        >
-          <v-icon>edit</v-icon>
-        </v-btn>
+        <!--        <v-btn-->
+        <!--          v-if="selected.length === 1"-->
+        <!--          title="Edit"-->
+        <!--          icon-->
+        <!--          @click="dialog = true"-->
+        <!--        >-->
+        <!--          <v-icon>edit</v-icon>-->
+        <!--        </v-btn>-->
       </div>
-      <div></div>
+      <div>
+        <AgencyCreateUpdateForm />
+      </div>
     </v-toolbar>
 
     <v-data-table
       v-model="selected"
       :loading="loading"
       :headers="headers"
-      :items="items"
+      :items="list"
       show-select
       class="elevation-1"
-    >
-      <template v-slot:items="props">
-        <td>
-          <v-checkbox
-            v-model="props.selected"
-            primary
-            hide-details
-          ></v-checkbox>
-        </td>
-        <td>{{ props.item.id }}</td>
-        <td>{{ props.item.name }}</td>
-        <td>{{ extractFloorNames(props.item) }}</td>
-        <td>{{ getNumberOfFloors(props.item) }}</td>
-
-        <td class="justify-center layout px-0"></td>
-      </template>
-    </v-data-table>
+    />
   </div>
 </template>
 <script>
-import { GetCompany } from "@/api/company";
+import { DeleteCompany } from "@/api/company";
 
-// import AgencyCreateUpdateForm from "./AgencyCreateUpdateForm";
+import { mapGetters } from "vuex";
+import AgencyCreateUpdateForm from "./AgencyCreateUpdateForm";
 
 export default {
-  // components: { AgencyCreateUpdateForm },
+  components: { AgencyCreateUpdateForm },
   data: () => ({
     selected: [],
     loading: false,
@@ -74,24 +61,41 @@ export default {
       floors: name
     }
   }),
+  computed: {
+    ...mapGetters({
+      companyList: "company/getCompanyList"
+    }),
+    list() {
+      if (this.loading) return [];
+      return this.companyList.map(company => ({
+        id: company.id,
+        name: company.name,
+        floors: company.floors.map(floor => floor.name).join(),
+        floorNumbers: company.floors.length
+      }));
+    }
+    // getNumberOfFloors: item => 1
+  },
   created() {
     this.fetchCompanies();
-    // this.fetchCompanies();
   },
   methods: {
     async fetchCompanies() {
       this.loading = true;
+      await this.$store.dispatch("company/fetchCompanies");
+      this.loading = false;
+    },
+    async deleteAgency() {
       try {
-        const { data } = await GetCompany();
-        this.items = data.map(agencies => ({
-          ...agencies,
-          floors: agencies.floors.map(floor => floor.name).join(", "),
-          floorNumbers: agencies.floors.length
-        }));
+        for (let i in this.selected) {
+          await DeleteCompany(this.selected[i].id);
+          delete this.selected[i];
+          this.$set(this, "selected", []);
+          this.fetchCompanies();
+        }
       } catch (error) {
         this.error = error;
       }
-      this.loading = false;
     }
   }
 };

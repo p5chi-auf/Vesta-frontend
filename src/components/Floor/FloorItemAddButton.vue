@@ -59,6 +59,7 @@ export default {
   methods: {
     async addSubject(img, size) {
       await addObject({
+        additional: {},
         editable: true,
         floorId: this.floorId,
         image: img,

@@ -2,50 +2,64 @@
   <v-layout justify-center>
     <v-btn icon @click.stop="dialog = true"> <v-icon>add</v-icon> </v-btn>
 
-    <v-dialog v-model="dialog" max-width="600" persistent border="1px">
-      <v-toolbar color="indigo lighten-5" class="elevation-5">
-        <v-toolbar-title font-weight-black>Agency</v-toolbar-title>
-      </v-toolbar>
-      <v-card>
-        <v-card-title class="headline">Add or Edit Agency</v-card-title>
-        <v-container grid-list-md>
-          <v-layout justify-center>
-            <v-flex xs12 sm6 md4>
-              <v-card style="border-radius:20px" color="indigo lighten-4">
-                <v-card-title>
+    <v-dialog v-model="dialog" max-width="350">
+      <v-card :loading="isLoading">
+        <v-card-title>
+          <span class="headline">Add Agency</span>
+        </v-card-title>
+        <v-card-text>
+          <v-form>
+            <v-container>
+              <v-row>
+                <v-col>
                   <v-text-field
-                    v-model="company.name"
-                    label="Agency Name"
+                    v-model="form.name"
+                    label="Name"
+                    required
                   ></v-text-field>
-                </v-card-title>
-              </v-card>
-            </v-flex>
-            <v-flex xs12 sm6 md4>
-              <v-card style="border-radius:20px" color="indigo lighten-4">
-                <v-card-title>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col>
+                  Floors
+                </v-col>
+              </v-row>
+              <v-row v-for="(floor, i) in form.floors" :key="i">
+                <v-flex :sm="11">
                   <v-text-field
-                    v-model="floors.name"
-                    label="The name of the floor"
+                    v-model="form.floors[i]"
+                    label="Floor Name"
+                    required
                   ></v-text-field>
-                </v-card-title>
-              </v-card>
-            </v-flex>
-            <v-flex xs12 sm6 md4>
-              <v-card style="border-radius:20px; " color="indigo lighten-4">
-                <v-card-title>
-                  <v-btn icon><v-icon>add</v-icon></v-btn>
-                  Add floor
-                </v-card-title>
-                <v-card-title>Floors nr : </v-card-title>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
-
+                </v-flex>
+                <v-flex :sm="1">
+                  <v-btn
+                    v-if="i === form.floors.length - 1"
+                    id="add"
+                    class="action-btn"
+                    icon
+                    @click="addFloor"
+                  >
+                    <v-icon>add</v-icon>
+                  </v-btn>
+                  <v-btn
+                    v-else
+                    id="delete"
+                    class="action-btn"
+                    icon
+                    @click="deleteFloor"
+                  >
+                    <v-icon>delete</v-icon>
+                  </v-btn>
+                </v-flex>
+              </v-row>
+            </v-container>
+          </v-form>
+        </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="red darken-1" text @click="dialog = false">Close</v-btn>
-          <v-btn text color="blue darken-1" @click="onCreate">Save</v-btn>
+          <v-btn text color="blue darken-1" @click="addNewAgency">Save</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -58,52 +72,53 @@ import { addNewFloor } from "@/api/company";
 export default {
   data() {
     return {
+      isLoading: false,
       dialog: false,
-      company: {
+      added: true,
+      form: {
+        floors: [""],
         name: ""
-      },
-      floors: {
-        name: "",
-        number: ""
       }
     };
   },
-  created() {
-    this.fetchCompanies();
-    this.fetchFloors();
-    this.onCreate();
-  },
   methods: {
-    async fetchCompanies() {
-      try {
-        const { data } = await addNewCompany();
-        this.items = data;
-      } catch (error) {
-        this.error = error;
-      }
+    addFloor() {
+      this.form.floors.push("");
     },
-    async fetchFloors() {
-      try {
-        const { data } = await addNewFloor();
-        this.items = data;
-      } catch (error) {
-        this.error = error;
-      }
+
+    deleteFloor() {
+      this.form.floors.splice(this.form.floors, 1);
     },
-    async onCreate() {
-      console.log("test");
+    async addNewAgency() {
+      this.isLoading = true;
       try {
         await addNewCompany({
-          name: this.company.name
-          // number: this.floors.number
+          name: this.form.name,
+          floors: this.form.floors.map(floor => ({ name: floor }))
+        });
+        await this.$store.dispatch("company/fetchCompanies");
+
+        this.dialog = false;
+      } catch (error) {
+        this.error = error;
+      }
+      this.isLoading = false;
+    },
+    async addNewFloor() {
+      try {
+        addNewFloor({
+          name: this.form.floors
         });
       } catch (error) {
         this.error = error;
       }
-      await addNewFloor({
-        name: this.floors.name
-      });
     }
   }
 };
 </script>
+<style>
+.action-btn {
+  position: relative;
+  top: 1rem;
+}
+</style>

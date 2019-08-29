@@ -24,11 +24,34 @@
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
+      <v-list-group
+        v-for="item in companyList"
+        :key="item.title"
+        v-model="item.active"
+        prepend-icon="location_city"
+        no-action
+      >
+        <template slot="activator">
+          <v-list-item-content>
+            <v-list-item-title v-text="item.name"></v-list-item-title>
+          </v-list-item-content>
+        </template>
+
+        <v-list-item
+          v-for="subItem in item.floors"
+          :key="subItem.title"
+          :to="{ name: 'floor-view', params: { floorId: subItem.id } }"
+        >
+          <v-list-item-content>
+            <v-list-item-title v-text="subItem.name"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-group>
     </v-list>
   </v-navigation-drawer>
 </template>
 <script>
-import { GetCompany } from "@/api/company";
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -50,18 +73,13 @@ export default {
       ]
     };
   },
-  async created() {
-    const companies = (await GetCompany()).data;
-    companies.forEach(company => {
-      this.items.push({
-        title: company.name,
-        action: "location_city",
-        items: company.floors.map(floor => ({
-          title: floor.name,
-          route: { name: "floor-view", params: { floorId: floor.id } }
-        }))
-      });
-    });
+  computed: {
+    ...mapGetters({
+      companyList: "company/getCompanyList"
+    })
+  },
+  created() {
+    this.$store.dispatch("company/fetchCompanies");
   }
 };
 </script>

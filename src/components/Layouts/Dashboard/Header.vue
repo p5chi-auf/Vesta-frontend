@@ -9,8 +9,6 @@
       fixed
     >
       <v-toolbar-title class="ml-0 pl-3 toolbar">
-        <!--        <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>-->
-
         <span class="title ml-3 mr-5"> Vesta </span>
       </v-toolbar-title>
 
@@ -65,11 +63,13 @@
         </v-card>
       </v-menu>
     </v-app-bar>
-    <UserCreateUpdateForm
-      v-model="isUserModalOpened"
-      :user-id="getUserInfo.id"
-      @hide="dialog = false"
-    />
+    <div>
+      <UserCreateUpdateForm
+        ref="userForm"
+        :user-id="getUserInfo.id"
+        title="User info"
+      />
+    </div>
   </div>
 </template>
 <script>
@@ -80,10 +80,8 @@ import UserCreateUpdateForm from "@/components/User/UserCreateUpdateForm";
 export default {
   components: { UserCreateUpdateForm },
   data: () => ({
-    dialog: false,
     menu: false,
-    drawer: true,
-    isUserModalOpened: false
+    drawer: true
   }),
   computed: {
     ...mapGetters({
@@ -103,7 +101,7 @@ export default {
     },
     open() {
       console.log("open");
-      this.isUserModalOpened = true;
+      this.$refs.userForm.open();
       // call mutation with empty tokens
       // after it redirect it to auth page
     }

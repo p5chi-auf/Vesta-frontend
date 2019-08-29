@@ -1,6 +1,5 @@
 <template>
   <div>
-    <UserCreateUpdateForm v-model="dialog" @hide="dialog = false" />
     <v-toolbar color="indigo lighten-5">
       <v-toolbar-title v-if="selected.length === 0">Users</v-toolbar-title>
       <v-toolbar-title v-if="selected.length > 0"
@@ -8,22 +7,27 @@
       >
       <v-spacer></v-spacer>
       <div v-if="selected.length > 0">
-        <v-btn title="Delete" icon @click="isConfirmRemoveShowed = true">
+        <v-btn title="Delete" icon @click="openConfirmModal">
           <v-icon>delete</v-icon>
         </v-btn>
-        <v-btn
-          v-if="selected.length === 1"
-          title="Edit"
-          icon
-          @click="dialog = true"
-        >
-          <v-icon>edit</v-icon>
+        <v-btn icon>
+          <UserCreateUpdateForm
+            v-if="selected.length === 1"
+            :user-id="selected[0].id"
+            title="Edit User"
+          >
+            <template slot="icon">
+              <v-icon>edit</v-icon>
+            </template>
+          </UserCreateUpdateForm>
         </v-btn>
       </div>
       <div>
-        <v-btn title="Add" icon @click="dialog = true">
-          <v-icon>add</v-icon>
-        </v-btn>
+        <UserCreateUpdateForm title="Add User">
+          <template slot="icon">
+            <v-icon>add</v-icon>
+          </template>
+        </UserCreateUpdateForm>
       </div>
     </v-toolbar>
     <v-data-table
@@ -53,7 +57,7 @@
         <td class="justify-center layout px-0"></td>
       </template>
     </v-data-table>
-    <ConfirmDialog v-if="isConfirmRemoveShowed" @ok="deleteItem" />
+    <ConfirmDialog ref="confirmRemoveDialog" @ok="deleteItem" />
   </div>
 </template>
 <script>
@@ -90,17 +94,21 @@ export default {
     ...mapActions({
       fetchUserList: "user/fetchUsers"
     }),
+    openConfirmModal() {
+      const multiple = this.selected.length > 1 ? true : false;
+      this.$refs.confirmRemoveDialog.open(multiple);
+    },
     async deleteItem() {
       try {
         for (let i in this.selected) {
           await deleteUser(this.selected[i].id);
           delete this.selected[i];
-          this.fetchUserList();
+          await this.fetchUserList();
         }
       } catch (error) {
         this.error = error;
       }
-      this.isConfirmRemoveShowed = false;
+      this.$refs.confirmRemoveDialog.close();
       this.$emit("cancel", false);
     }
   }

@@ -1,131 +1,96 @@
 <template>
-  <v-layout row justify-center>
-    <v-dialog :value="value" persistent max-width="700px">
+  <v-row justify="center">
+    <v-dialog v-model="dialog" persistent max-width="600px">
+      <template v-slot:activator="{ on }">
+        <v-btn title="Add" icon v-on="on">
+          <slot name="icon" />
+        </v-btn>
+      </template>
       <v-card>
-        <v-toolbar color="teal">
-          <v-card-title>
-            <span class="headline">Add User</span>
-          </v-card-title>
-        </v-toolbar>
-
-        <v-progress-linear
-          v-if="loading"
-          :indeterminate="true"
-          height="3px"
-          class="auth__progress-bar"
-        ></v-progress-linear>
-
-        <v-container fill-height fluid grid-list-xl>
-          <v-layout justify-center wrap>
-            <v-flex xs12 md8>
-              <v-container
-                color="green"
-                title="Edit Profile"
-                text="Complete your profile"
-              >
-                <v-form>
-                  <v-container py-0>
-                    <v-layout wrap>
-                      <v-flex xs12 md6>
-                        <v-text-field
-                          v-model="form.firstName"
-                          v-validate="{ min: 2, max: 25 }"
-                          filled
-                          label="First Name"
-                          name="firstName"
-                          :error-messages="errors.collect('firstName')"
-                        ></v-text-field>
-                      </v-flex>
-                      <v-flex xs12 md6>
-                        <v-text-field
-                          v-model="form.lastName"
-                          v-validate="{ min: 2, max: 25 }"
-                          filled
-                          label="Last Name"
-                          name="lastName"
-                          :error-messages="errors.collect('lastName')"
-                        ></v-text-field>
-                      </v-flex>
-                      <v-flex xs12 md12>
-                        <v-text-field
-                          v-model="form.username"
-                          v-validate="{ min: 5, max: 25 }"
-                          filled
-                          label="User Name"
-                          name="username"
-                          :error-messages="errors.collect('username')"
-                        ></v-text-field>
-                      </v-flex>
-                      <v-flex xs12 md12>
-                        <v-text-field
-                          v-model="form.email"
-                          v-validate="'email'"
-                          filled
-                          label="Email Address"
-                          name="email"
-                          :error-messages="errors.collect('email')"
-                        ></v-text-field>
-                      </v-flex>
-                      <v-flex xs12 md12>
-                        <v-text-field
-                          v-model="form.password"
-                          v-validate="'password_complexity'"
-                          type="password"
-                          filled
-                          label="Password"
-                          name="password"
-                          :error-messages="errors.collect('password')"
-                        ></v-text-field>
-                      </v-flex>
-                    </v-layout>
-                  </v-container>
-                </v-form>
-              </v-container>
-            </v-flex>
-
-            <v-container grid-list-md text-xs-center>
-              <v-layout wrap justify-end>
-                <v-flex xs12 md2>
-                  <v-btn text block color="error" @click="$emit('input', false)"
-                    >Close</v-btn
-                  >
-                </v-flex>
-                <v-flex xs12 md2>
-                  <v-btn
-                    color="blue darken-1"
-                    :loading="loading"
-                    :disabled="loading"
-                    block
-                    text
-                    @click="onSubmit"
-                    >Save</v-btn
-                  >
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-layout>
-        </v-container>
+        <v-card-title>
+          <span class="headline">{{ title }}</span>
+        </v-card-title>
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col cols="12" sm="6">
+                <v-text-field
+                  v-model="form.firstName"
+                  v-validate="{ min: 2, max: 25 }"
+                  label="First Name*"
+                  name="firstName"
+                  :error-messages="errors.collect('firstName')"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <v-text-field
+                  v-model="form.lastName"
+                  v-validate="{ min: 2, max: 25 }"
+                  label="Last Name*"
+                  name="lastName"
+                  :error-messages="errors.collect('lastName')"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field
+                  v-model="form.username"
+                  v-validate="{ min: 5, max: 25 }"
+                  label="User Name*"
+                  name="username"
+                  :error-messages="errors.collect('username')"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field
+                  v-model="form.email"
+                  v-validate="'email'"
+                  label="Email Address*"
+                  name="email"
+                  :error-messages="errors.collect('email')"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field
+                  v-model="form.password"
+                  v-validate="'password_complexity'"
+                  label="Password*"
+                  name="password"
+                  :error-messages="errors.collect('password')"
+                ></v-text-field>
+              </v-col>
+            </v-row>
+          </v-container>
+          <small>*indicates required field</small>
+        </v-card-text>
+        <v-card-actions>
+          <div class="flex-grow-1"></div>
+          <v-btn color="blue darken-1" text @click="dialog = false"
+            >Close</v-btn
+          >
+          <v-btn color="blue darken-1" text @click="onSubmit">Save</v-btn>
+        </v-card-actions>
       </v-card>
     </v-dialog>
-  </v-layout>
+  </v-row>
 </template>
 <script>
 import { register, getUserInfo, editUser } from "@/api/user";
 export default {
   props: {
-    value: {
-      type: Boolean,
-      default: false
-    },
     userId: {
-      required: false,
       type: Number,
+      required: false,
       default: () => 0
+    },
+    title: {
+      type: String,
+      default: ""
     }
   },
   data: () => ({
     error: "",
     loading: false,
+    dialog: false,
     items: [],
     form: {
       firstName: "",
@@ -133,9 +98,11 @@ export default {
       username: "",
       email: "",
       password: ""
-    }
+    },
+    image: null
   }),
   async created() {
+    console.log(this.userId);
     if (this.userId) {
       this.form = (await getUserInfo(this.userId)).data;
     }
@@ -159,8 +126,15 @@ export default {
       } catch (error) {
         this.error = error;
       }
-      this.$emit("input", false);
+      this.$store.dispatch("user/fetchUsers");
+      this.dialog = false;
       this.loading = false;
+    },
+    open() {
+      this.dialog = true;
+    },
+    close() {
+      this.dialog = false;
     }
   }
 };
